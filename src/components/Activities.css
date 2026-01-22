@@ -1,0 +1,179 @@
+.activities {
+    padding: 80px 24px;
+    background: linear-gradient(to bottom right, #fae8ff, #fce7f3, #dbeafe);
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+}
+
+.activity-card {
+    position: relative;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+    height: 320px;
+    cursor: pointer;
+}
+
+.activity-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+.activity-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.activity-card:hover .activity-bg {
+    transform: scale(1.1);
+}
+
+.activity-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    transition: opacity 0.5s ease;
+}
+
+.activity-card:hover .activity-overlay {
+    opacity: 0.4;
+}
+
+.activity-overlay.red-orange {
+    background: linear-gradient(to bottom right, #ef4444, #f97316);
+}
+
+.activity-overlay.pink-purple {
+    background: linear-gradient(to bottom right, #ec4899, #a855f7);
+}
+
+.activity-overlay.blue-indigo {
+    background: linear-gradient(to bottom right, #3b82f6, #6366f1);
+}
+
+.activity-overlay.yellow-amber {
+    background: linear-gradient(to bottom right, #eab308, #d97706);
+}
+
+.activity-content {
+    position: relative;
+    z-index: 10;
+    padding: 32px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.activity-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 0 auto 24px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.activity-icon.red-orange {
+    background: linear-gradient(to bottom right, #ef4444, #f97316);
+}
+
+.activity-icon.pink-purple {
+    background: linear-gradient(to bottom right, #ec4899, #a855f7);
+}
+
+.activity-icon.blue-indigo {
+    background: linear-gradient(to bottom right, #3b82f6, #6366f1);
+}
+
+.activity-icon.yellow-amber {
+    background: linear-gradient(to bottom right, #eab308, #d97706);
+}
+
+.activity-card:hover .activity-icon {
+    transform: rotate(12deg);
+}
+
+.activity-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 12px;
+    color: white;
+    text-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.activity-description {
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.activity-shine {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, transparent, white, transparent);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.activity-card:hover .activity-shine {
+    transform: scaleX(1);
+}
+
+.activities-cta {
+    margin-top: 64px;
+    text-align: center;
+}
+
+.activities-note {
+    font-size: 1.125rem;
+    color: #374151;
+    margin-bottom: 16px;
+}
+
+.activities-btn {
+    padding: 12px 32px;
+    background: #7c3aed;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.activities-btn:hover {
+    background: #6d28d9;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+}

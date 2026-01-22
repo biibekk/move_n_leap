@@ -1,0 +1,140 @@
+.cta {
+    padding: 96px 24px;
+    background: linear-gradient(to bottom right, #7c3aed, #6366f1, #3b82f6);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-blob {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.2;
+    mix-blend-mode: multiply;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.cta-blob-1 {
+    top: 0;
+    left: 0;
+    background: #ec4899;
+}
+
+.cta-blob-2 {
+    bottom: 0;
+    right: 0;
+    background: #fbbf24;
+    animation-delay: 1s;
+}
+
+.cta-container {
+    max-width: 896px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.cta-title {
+    font-size: 3.75rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.cta-description {
+    font-size: 1.5rem;
+    color: rgba(233, 213, 255, 1);
+    margin-bottom: 40px;
+    max-width: 672px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.cta-btn {
+    padding: 20px 40px;
+    font-weight: bold;
+    font-size: 1.125rem;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-btn.primary {
+    background: linear-gradient(to right, #fbbf24, #f59e0b, #d97706);
+    color: white;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.cta-btn.primary:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #fcd34d, #fbbf24, #f59e0b);
+}
+
+.cta-btn.secondary {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.cta-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    color: white;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+    color: #fde047;
+}
+
+.stat-text {
+    font-weight: 600;
+}
+
+@media (min-width: 640px) {
+    .cta-buttons {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .cta-title {
+        font-size: 2.5rem;
+    }
+    
+    .cta-description {
+        font-size: 1.25rem;
+    }
+    
+    .cta-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+}
