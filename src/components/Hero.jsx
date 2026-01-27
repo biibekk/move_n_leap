@@ -22,7 +22,7 @@ export default function Hero() {
       {/* Gradient Overlay */}
       <div className="hero-overlay"></div>
 
-      {/* Navigation */}
+      {/* Navigation
       <nav className="hero-nav">
         <div className="container">
           <div className="nav-content">
@@ -44,7 +44,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Hero Content */}
       <div className="hero-content-wrapper">

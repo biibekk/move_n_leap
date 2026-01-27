@@ -8,9 +8,13 @@
   --primary-light: #6366f1;
   --primary-dark: #4338ca;
   
-  --accent-color: #10b981;
-  --accent-light: #34d399;
-  --accent-dark: #059669;
+  --cta-accent-color: #10b981;
+  --cta-accent-light: #34d399;
+  --cta-accent-dark: #059669;
+
+  --accent-color: #fbbf24;            /* Yellow/Gold */
+  --accent-light: #fcd34d;            /* Light yellow */
+  --accent-dark: #f59e0b;             /* Orange */
   
   --secondary-color: #f59e0b;
   --secondary-light: #fbbf24;
@@ -126,7 +130,8 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(to right, var(--accent-color), var(--accent-dark));
+  background: linear-gradient(to right, var(--cta-accent-color), var(--cta-accent-dark));
+  /* background: linear-gradient(to right, var(--accent-color), var(--accent-dark)); */
   color: white;
   box-shadow: var(--shadow-lg);
 }
