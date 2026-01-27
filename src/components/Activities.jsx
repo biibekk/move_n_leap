@@ -1,7 +1,8 @@
 import { Swords, Music, Drama, Crown, Dumbbell, Palette } from 'lucide-react';
 import './Activities.css';
 
-export default function Activities() {
+export default function Activities({scrollToSection, sections}) {
+  const { ctaRef } = sections;
   const activities = [
     {
       icon: <Swords />,
@@ -129,7 +130,9 @@ export default function Activities() {
           <div className="cta-content">
             <h3>Not Sure Which Activity to Choose?</h3>
             <p>Book a free consultation with our program coordinator to find the perfect fit for your child.</p>
-            <a href="#contact" className="btn btn-primary btn-lg">
+            <a href="#contact" className="btn btn-primary btn-lg"
+            onClick={() => scrollToSection(ctaRef)}
+            >
               Schedule Free Consultation
             </a>
           </div>

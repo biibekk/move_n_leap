@@ -22,30 +22,6 @@ export default function Hero() {
       {/* Gradient Overlay */}
       <div className="hero-overlay"></div>
 
-      {/* Navigation
-      <nav className="hero-nav">
-        <div className="container">
-          <div className="nav-content">
-            <div className={`logo ${isVisible ? 'visible' : ''}`}>
-              <img
-                src={`${process.env.PUBLIC_URL}/transparent_favicon-32x32.png`}
-                alt="Move N Leap"
-                className="hero-logo"
-              />
-              <span>Move N Leap</span>
-            </div>
-            <div className="nav-actions">
-              <a href="tel:+919876543210" className="nav-phone">
-                📞 +91 98765 43210
-              </a>
-              <a href="#book-trial" className="btn btn-primary btn-sm">
-                Book Free Trial
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav> */}
-
       {/* Hero Content */}
       <div className="hero-content-wrapper">
         <div className="container">
@@ -54,7 +30,7 @@ export default function Hero() {
             <div className={`hero-text ${isVisible ? 'visible' : ''}`}>
               <div className="trust-badge">
                 <Shield className="trust-icon" />
-                <span>Trusted by 500+ Families in Gurugram</span>
+                <span>Trusted by 200+ Families in Noida</span>
               </div>
 
               <h1 className="hero-title">
@@ -104,7 +80,7 @@ export default function Hero() {
                 <div className="proof-item">
                   <Users className="proof-icon" />
                   <div>
-                    <strong>500+</strong>
+                    <strong>200+</strong>
                     <span>Happy Students</span>
                   </div>
                 </div>
@@ -129,7 +105,7 @@ export default function Hero() {
             <div className={`hero-image ${isVisible ? 'visible' : ''}`}>
               <div className="image-wrapper">
                 <img 
-                  src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" 
+                  src="https://www.teachhub.com/wp-content/uploads/2020/05/Top-10-Indoor-Games-scaled.jpg" 
                   alt="Happy children learning and playing"
                   className="hero-img"
                 />

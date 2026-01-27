@@ -76,7 +76,7 @@ export default function About() {
           <div className="about-images">
             <div className="image-main">
               <img 
-                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" 
+                src="https://s3.ap-south-1.amazonaws.com/assets.klayschools.com/wp-content/uploads/2024/08/30163826/2-3.jpg" 
                 alt="Happy children at Move N Leap Academy"
               />
             </div>
@@ -98,11 +98,11 @@ export default function About() {
         {/* Stats Bar */}
         <div className="about-stats">
           <div className="stat-item">
-            <strong>500+</strong>
+            <strong>200+</strong>
             <span>Active Students</span>
           </div>
           <div className="stat-item">
-            <strong>25+</strong>
+            <strong>10+</strong>
             <span>Expert Instructors</span>
           </div>
           <div className="stat-item">
@@ -110,7 +110,7 @@ export default function About() {
             <span>Parent Satisfaction</span>
           </div>
           <div className="stat-item">
-            <strong>10,000+</strong>
+            <strong>5,000+</strong>
             <span>Classes Conducted</span>
           </div>
         </div>

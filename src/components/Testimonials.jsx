@@ -135,7 +135,7 @@ export default function Testimonials() {
         {/* Trust Indicators */}
         <div className="trust-indicators">
           <div className="trust-item">
-            <span className="trust-number">500+</span>
+            <span className="trust-number">200+</span>
             <span className="trust-label">Happy Families</span>
           </div>
           <div className="trust-item">

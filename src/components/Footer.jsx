@@ -1,4 +1,4 @@
-import { Award, MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
+import { Check, Star, Trophy, Award, MapPin, Phone, Mail, Clock, Shield, Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
 import './Footer.css';
 
 export default function Footer() {
@@ -67,7 +67,7 @@ export default function Footer() {
             <ul className="footer-contact">
               <li>
                 <MapPin className="contact-icon" />
-                <span>Sector 47, Gurugram<br />Haryana 122018, India</span>
+                <span>Sector 40, Noida<br />Noida 201301, India</span>
               </li>
               <li>
                 <Phone className="contact-icon" />
@@ -88,19 +88,23 @@ export default function Footer() {
         {/* Trust Badges */}
         <div className="footer-badges">
           <div className="badge-item">
-            <span className="badge-icon">🏆</span>
+            {/* <span className="badge-icon">🏆</span> */}
+            <Trophy className="proof-icon" />
             <span>Certified Academy</span>
           </div>
           <div className="badge-item">
-            <span className="badge-icon">🛡️</span>
+            {/* <span className="badge-icon">🛡️</span> */}
+            <Shield className="proof-icon" />
             <span>Fully Insured</span>
           </div>
           <div className="badge-item">
-            <span className="badge-icon">✓</span>
+            {/* <span className="badge-icon">✓</span> */}
+            <Check className="proof-icon" />
             <span>Background Checked Staff</span>
           </div>
           <div className="badge-item">
-            <span className="badge-icon">⭐</span>
+            {/* <span className="badge-icon">⭐</span> */}
+            <Star className="proof-icon" />
             <span>4.9/5 Rated</span>
           </div>
         </div>
@@ -118,7 +122,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="footer-credit">
-            <p>Made with ❤️ for kids in Gurugram</p>
+            <p>Made with ❤️ for kids in Noida</p>
           </div>
         </div>
       </div>
