@@ -56,7 +56,7 @@ export default function CTA() {
                   Book Your Free Trial Now
                 </button>
                 <a href="tel:+919876543210" className="btn btn-secondary btn-lg">
-                  📞 Call Us: +91 98765 43210
+                  Call Us: +91 98765 43210
                 </a>
               </div>
 
@@ -114,7 +114,7 @@ export default function CTA() {
                 <label htmlFor="activity">Interested Activity *</label>
                 <select id="activity" required>
                   <option value="">Choose activity</option>
-                  <option value="taekwondo">Taekwondo</option>
+                  <option value="self-defense">Self Defense</option>
                   <option value="dance">Dance</option>
                   <option value="drama">Drama & Theater</option>
                   <option value="chess">Chess</option>
@@ -140,8 +140,9 @@ export default function CTA() {
         <div className="cta-content urgency-banner">
           {/* <div className="urgency-banner"> */}
             <div className="urgency-content">
-              <span className="urgency-badge">Limited Spots</span>
-              <p>Only <strong>12 spots left</strong> this month. Book now!</p>
+              <span className="urgency-badge">Limited Spots Available</span>
+              <p>Only <strong>12 spots left</strong> for this month's intake. Book now to secure your child's place!</p>
+              {/* <p>Only <strong>12 spots left</strong> this month. Book now!</p> */}
             </div>
           {/* </div> */}
         </div>

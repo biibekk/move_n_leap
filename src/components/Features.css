@@ -159,7 +159,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .features {
-    padding: 4rem 1.5rem;
+    padding: 4rem 1rem;
   }
 
   .section-title {

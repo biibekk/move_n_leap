@@ -208,7 +208,7 @@
 
 @media (max-width: 768px) {
   .about {
-    padding: 4rem 1.5rem;
+    padding: 4rem 1rem;
   }
 
   .about-images {
@@ -235,11 +235,16 @@
 
   .about-cta {
     flex-direction: column;
+    /* align-items: center; */
   }
 
-  .btn {
+  .btn-primary {
     width: 100%;
   }
+
+  /* .btn-outline {
+    width: auto;
+  } */
 
   .about-stats {
     grid-template-columns: 1fr;

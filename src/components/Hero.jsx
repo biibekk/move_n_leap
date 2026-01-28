@@ -28,20 +28,22 @@ export default function Hero() {
           <div className="hero-grid">
             {/* Left Content */}
             <div className={`hero-text ${isVisible ? 'visible' : ''}`}>
-              <div className="trust-badge">
-                <Shield className="trust-icon" />
-                <span>Trusted by 200+ Families in Noida</span>
+              <div className="hero-heading-wrapper">
+                <div className="trust-badge">
+                  <Shield className="trust-icon" />
+                  <span>Trusted by 200+ Families in Noida</span>
+                </div>
+
+                <h1 className="hero-title">
+                  Transform Your Child's
+                  <span className="highlight"> &nbsp;Confidence&nbsp; </span>
+                  in 30 Days
+                </h1>
               </div>
 
-              <h1 className="hero-title">
-                Transform Your Child's
-                <span className="highlight"> Confidence </span>
-                in 30 Days
-              </h1>
-
               <p className="hero-description">
-                Expert-led programs in Taekwondo, Dance, Drama, and Chess. 
-                Build discipline, boost confidence, and help your child discover their potential 
+                Expert-led programs in Self Defense, Dance, Drama, and Chess.
+                Build discipline, boost confidence, and help your child discover their potential
                 in a safe, structured environment.
               </p>
 
@@ -68,9 +70,9 @@ export default function Hero() {
               {/* CTA Buttons */}
               <div className="hero-cta">
                 <a href="#book-trial" className="btn btn-primary btn-lg">
-                  Book Your Free Trial Class →
+                  Book Your Free Trial Class
                 </a>
-                <a href="#learn-more" className="btn btn-outline">
+                <a href="#learn-more" className="btn btn-outline btn-cta-hero-outline">
                   Learn More
                 </a>
               </div>
@@ -104,8 +106,8 @@ export default function Hero() {
             {/* Right Content - Image/Illustration */}
             <div className={`hero-image ${isVisible ? 'visible' : ''}`}>
               <div className="image-wrapper">
-                <img 
-                  src="https://www.teachhub.com/wp-content/uploads/2020/05/Top-10-Indoor-Games-scaled.jpg" 
+                <img
+                  src="https://www.teachhub.com/wp-content/uploads/2020/05/Top-10-Indoor-Games-scaled.jpg"
                   alt="Happy children learning and playing"
                   className="hero-img"
                 />

@@ -155,6 +155,7 @@
 }
 
 .contact-btn.phone:hover {
+  background: rgba(255, 255, 255, 0.83);
   transform: scale(1.05);
   box-shadow: var(--shadow-lg);
 }
@@ -196,7 +197,7 @@
 
 @media (max-width: 768px) {
   .faq {
-    padding: 4rem 1.5rem;
+    padding: 4rem 1rem;
   }
 
   .faq-question {

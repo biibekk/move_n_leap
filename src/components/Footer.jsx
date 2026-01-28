@@ -12,11 +12,15 @@ export default function Footer() {
           {/* Company Info */}
           <div className="footer-section">
             <div className="footer-logo">
-              <Award className="footer-logo-icon" />
+              <img
+              src={`${process.env.PUBLIC_URL}/transparent_favicon-32x32.png`}
+              alt="Move N Leap"
+              className="logo-img"
+            />
               <span>Move N Leap</span>
             </div>
             <p className="footer-description">
-              Empowering children through expert-led programs in Taekwondo, Dance, Drama, Chess & more. 
+              Empowering children through expert-led programs in Self Defense, Dance, Drama, Chess & more. 
               Building confidence, discipline, and lifelong skills since 2010.
             </p>
             <div className="footer-social">
@@ -52,7 +56,7 @@ export default function Footer() {
           <div className="footer-section">
             <h4 className="footer-title">Our Programs</h4>
             <ul className="footer-links">
-              <li><a href="#activities">Taekwondo</a></li>
+              <li><a href="#activities">Self Defense</a></li>
               <li><a href="#activities">Dance Classes</a></li>
               <li><a href="#activities">Drama & Theater</a></li>
               <li><a href="#activities">Chess Training</a></li>

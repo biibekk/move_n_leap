@@ -6,7 +6,7 @@ export default function Activities({scrollToSection, sections}) {
   const activities = [
     {
       icon: <Swords />,
-      title: "Taekwondo",
+      title: "Self Defense",
       ageGroup: "Ages 5-16",
       description: "Build discipline, respect, and self-defense skills with certified black belt instructors.",
       benefits: ["Physical fitness", "Mental discipline", "Self-confidence", "Belt progression"],

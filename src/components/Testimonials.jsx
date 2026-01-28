@@ -8,8 +8,8 @@ export default function Testimonials() {
       role: "Mother of 8-year-old",
       image: "https://randomuser.me/api/portraits/women/1.jpg",
       rating: 5,
-      text: "My daughter joined the Taekwondo program 6 months ago and the transformation has been incredible. Her confidence has soared, and she's more disciplined at home. The instructors are patient, professional, and truly care about each child's development.",
-      activity: "Taekwondo"
+      text: "My daughter joined the Self Defense program 6 months ago and the transformation has been incredible. Her confidence has soared, and she's more disciplined at home. The instructors are patient, professional, and truly care about each child's development.",
+      activity: "Self Defense"
     },
     {
       name: "Rajesh Kumar",

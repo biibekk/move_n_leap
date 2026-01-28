@@ -61,7 +61,7 @@ export default function FAQ() {
             Got Questions? We've Got Answers
           </h2>
           <p className="section-description">
-            Everything you need to know about Move N Leap Academy. 
+            Everything you need to know about Move N Leap Academy.
             Can't find the answer you're looking for? Give us a call!
           </p>
         </div>
@@ -69,11 +69,11 @@ export default function FAQ() {
         <div className="faq-container">
           <div className="faq-list">
             {faqs.map((faq, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`faq-item ${openIndex === index ? 'active' : ''}`}
               >
-                <button 
+                <button
                   className="faq-question"
                   onClick={() => toggleFAQ(index)}
                 >
@@ -94,11 +94,11 @@ export default function FAQ() {
               <h3>Still Have Questions?</h3>
               <p>Our friendly team is here to help. Reach out and we'll get back to you within 24 hours.</p>
               <div className="cta-box-actions">
-                <a href="tel:+919876543210" className="contact-btn phone">
-                  📞 Call Us Now
-                </a>
                 <a href="https://wa.me/919876543210" className="contact-btn whatsapp">
-                  💬 WhatsApp Chat
+                  WhatsApp Chat
+                </a>
+                <a href="tel:+919876543210" className="contact-btn phone">
+                  Call Us Now
                 </a>
               </div>
               <div className="cta-box-hours">
