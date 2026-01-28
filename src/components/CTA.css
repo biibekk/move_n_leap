@@ -14,6 +14,11 @@
   opacity: 0.5;
 }
 
+.cta .container {
+  position: relative;
+  z-index: 1;
+}
+
 .cta-content {
   position: relative;
   z-index: 1;
@@ -21,15 +26,13 @@
 
 /* Main CTA */
 .cta-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  margin-bottom: 3rem;
+  text-align: center;
 }
 
 .cta-text {
   color: white;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .cta-title {
@@ -51,6 +54,10 @@
 .cta-benefits {
   list-style: none;
   margin-bottom: 2rem;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-benefits li {
@@ -76,6 +83,44 @@
   gap: 1rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta-buttons .btn {
+  padding: 1.25rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-primary);
+}
+
+.btn-primary {
+  background: var(--accent-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
 }
 
 .btn-icon,
@@ -97,6 +142,7 @@
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 0.875rem;
@@ -110,6 +156,14 @@
   border-radius: var(--radius-2xl);
   padding: 2.5rem;
   box-shadow: var(--shadow-2xl);
+  max-width: 600px;
+  margin: 3rem auto;
+  scroll-margin-top: 100px;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .cta-form h3 {
@@ -122,7 +176,7 @@
 .cta-form p {
   font-size: 1rem;
   color: var(--text-secondary);
-  margin-bottom: 2rem;
+  margin: 0;
 }
 
 .form-group {
@@ -146,6 +200,7 @@
   font-size: 1rem;
   font-family: var(--font-primary);
   transition: all var(--transition-base);
+  background: white;
 }
 
 .form-group input:focus,
@@ -162,7 +217,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 1.25rem 2rem;
-  background: linear-gradient(to right, var(--accent-color), var(--accent-dark));
+  background: linear-gradient(to right, var(--primary-color), var(--primary-dark));
   color: white;
   font-weight: 700;
   font-size: 1.125rem;
@@ -184,23 +239,52 @@
   color: var(--text-light);
   text-align: center;
   line-height: 1.6;
+  margin: 0;
 }
 
-/* Urgency Banner */
+/* Urgency Banner - More Eye-Catching */
 .urgency-banner {
-  background: white;
+  background: linear-gradient(135deg, #fff 0%, #fef3c7 100%);
   padding: 1.5rem 2rem;
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
-  animation: pulse 2s ease-in-out infinite;
+  box-shadow: 0 8px 32px rgba(239, 68, 68, 0.3), 0 0 0 3px rgba(239, 68, 68, 0.2);
+  max-width: 600px;
+  margin: 0 auto;
+  /* border: 2px solid #fbbf24; */
+  position: relative;
+  overflow: hidden;
+  animation: urgencyPulse 2s ease-in-out infinite;
 }
 
-@keyframes pulse {
+/* Animated background shimmer */
+.urgency-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes urgencyPulse {
   0%, 100% {
     transform: scale(1);
+    /* box-shadow: 0 8px 32px rgba(239, 68, 68, 0.3), 0 0 0 3px rgba(239, 68, 68, 0.2); */
   }
   50% {
     transform: scale(1.02);
+    /* box-shadow: 0 12px 40px rgba(239, 68, 68, 0.4), 0 0 0 4px rgba(239, 68, 68, 0.3); */
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
   }
 }
 
@@ -210,6 +294,9 @@
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .urgency-badge {
@@ -221,34 +308,38 @@
   border-radius: var(--radius-full);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+  animation: badgeBounce 1s ease-in-out infinite;
+}
+
+@keyframes badgeBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 .urgency-content p {
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: var(--text-primary);
-  font-weight: 600;
+  font-weight: 700;
   margin: 0;
 }
 
 .urgency-content strong {
-  color: var(--primary-color);
+  color: #dc2626;
+  font-size: 1.25rem;
+  text-decoration: underline;
+  text-decoration-color: #ef4444;
+  text-decoration-thickness: 2px;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .cta-main {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .cta-title {
-    font-size: 2.5rem;
-  }
-}
-
+/* Responsive - Mobile stays the same */
 @media (max-width: 768px) {
   .cta {
-    padding: 4rem 1.5rem;
+    padding: 4rem 1rem;
   }
 
   .cta-title {
@@ -261,23 +352,86 @@
 
   .cta-buttons {
     flex-direction: column;
+    align-items: stretch;
   }
 
-  .btn {
+  .cta-buttons .btn {
     width: 100%;
   }
 
   .cta-trust {
     flex-direction: column;
     gap: 0.75rem;
+    text-align: center;
   }
 
   .cta-form-section {
     padding: 2rem 1.5rem;
+    margin: 2rem auto;
   }
 
   .urgency-content {
     flex-direction: column;
-    text-align: center;
+  }
+
+  .urgency-content p {
+    font-size: 1rem;
+  }
+
+  .urgency-content strong {
+    font-size: 1.125rem;
+  }
+}
+
+/* Desktop Layout - Side by Side */
+@media (min-width: 1024px) {
+  .cta .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .cta-content {
+    grid-column: 1;
+  }
+
+  .cta-main {
+    text-align: left;
+  }
+
+  .cta-text {
+    margin: 0;
+    max-width: none;
+  }
+
+  .cta-benefits {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+  }
+
+  .cta-buttons {
+    justify-content: flex-start;
+  }
+
+  .cta-trust {
+    justify-content: flex-start;
+  }
+
+  .cta-form-section {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    max-width: none;
+    position: sticky;
+    top: 100px;
+  }
+
+  .cta-content.urgency-banner {
+    grid-column: 1 / -1;
+    /* margin-top: 3rem; */
   }
 }

@@ -1,4 +1,8 @@
+import './App.css';
+
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
 import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Activities from "./components/Activities";
@@ -6,8 +10,7 @@ import About from "./components/About";
 import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
 import CTA from "./components/CTA";
-import Footer from "./components/Footer";
-import './App.css';
+
 
 import { useRef, useState, useEffect } from "react";
 

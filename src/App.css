@@ -99,7 +99,7 @@ body {
 .container {
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  /* padding: 0 1.5rem; */
 }
 
 /* Section Utility */
