@@ -36,14 +36,14 @@ export default function About() {
               Trusted by Parents, Loved by Kids
             </h2>
             <p className="about-text">
-              Move N Leap Academy was founded in 2010 with a simple mission: to provide 
-              a safe, nurturing environment where children can discover their passions and 
+              Move N Leap Academy was founded in 2010 with a simple mission: to provide
+              a safe, nurturing environment where children can discover their passions and
               develop essential life skills beyond the classroom.
             </p>
             <p className="about-text">
-              Our expert instructors don't just teach activities – they mentor, inspire, 
-              and help each child unlock their full potential. With state-of-the-art facilities 
-              and a curriculum designed by child development specialists, we ensure every 
+              Our expert instructors don't just teach activities – they mentor, inspire,
+              and help each child unlock their full potential. With state-of-the-art facilities
+              and a curriculum designed by child development specialists, we ensure every
               child receives personalized attention and grows at their own pace.
             </p>
 
@@ -75,14 +75,14 @@ export default function About() {
           {/* Right Image */}
           <div className="about-images">
             <div className="image-main">
-              <img 
-                src="https://s3.ap-south-1.amazonaws.com/assets.klayschools.com/wp-content/uploads/2024/08/30163826/2-3.jpg" 
+              <img
+                src="https://s3.ap-south-1.amazonaws.com/assets.klayschools.com/wp-content/uploads/2024/08/30163826/2-3.jpg"
                 alt="Happy children at Move N Leap Academy"
               />
             </div>
             <div className="image-secondary">
-              <img 
-                src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&q=80" 
+              <img
+                src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&q=80"
                 alt="Children learning at academy"
               />
             </div>
@@ -91,6 +91,50 @@ export default function About() {
             <div className="experience-badge">
               <strong>15+</strong>
               <span>Years of Excellence</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Founders Section - Full Width Below */}
+        <div className="founders-section">
+          <h3 className="founders-title">Meet Our Founders</h3>
+          <div className="founders-grid">
+            <div className="founder-card">
+              <div className="founder-image">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80"
+                  alt="Sarah Mitchell - Founder"
+                />
+              </div>
+              <div className="founder-info">
+                <h4>Sarah Mitchell</h4>
+                <span className="founder-role">Founder & CEO</span>
+                <p className="founder-bio">
+                  With over 20 years of experience in child development and education,
+                  Sarah founded Move N Leap to create a space where every child can thrive.
+                  She holds a Master's in Early Childhood Education and is a certified
+                  child psychologist.
+                </p>
+              </div>
+            </div>
+
+            <div className="founder-card">
+              <div className="founder-image">
+                <img
+                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80"
+                  alt="David Chen - Co-Founder"
+                />
+              </div>
+              <div className="founder-info">
+                <h4>David Chen</h4>
+                <span className="founder-role">Co-Founder & Program Director</span>
+                <p className="founder-bio">
+                  A former professional athlete and sports educator, David brings his
+                  passion for physical fitness and holistic development to Move N Leap.
+                  He specializes in creating engaging, age-appropriate curricula that
+                  build confidence and character.
+                </p>
+              </div>
             </div>
           </div>
         </div>
