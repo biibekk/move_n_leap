@@ -242,9 +242,10 @@
     width: 100%;
   }
 
-  /* .btn-outline {
-    width: auto;
-  } */
+  .btn-outline {
+    /* width: auto; */
+    color: var(--primary-color);
+  }
 
   .about-stats {
     grid-template-columns: 1fr;
