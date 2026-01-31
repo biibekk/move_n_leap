@@ -1,7 +1,59 @@
 import { Calendar, CheckCircle, ArrowRight } from 'lucide-react';
+import { useState } from "react";
+
 import './CTA.css';
 
+
 export default function CTA() {
+  const [formData, setFormData] = useState({
+    parentName: "",
+    phone: "",
+    childAge: "",
+    activity: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // console.log("Parent Lead:", formData); 
+
+    // TEMP: alert (replace later with API / Formspree)
+    // alert("Thank you! We’ll call you shortly.");
+
+    try {
+      const res = await fetch("http://localhost:4000/parent_lead", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await res.json();
+      console.log("Server response:", data);
+
+      alert("Form submitted successfully!");    
+    } catch(error){
+      console.error("Error submitting form:", error);
+      alert("Error submitting form. Please try again later.");
+    }
+
+    // reset form
+    setFormData({
+      parentName: "",
+      phone: "",
+      childAge: "",
+      activity: "",
+    });
+  };
+
   const handleScrollToForm = () => {
     const form = document.querySelector('.cta-form-section');
     if (form) {
@@ -49,7 +101,7 @@ export default function CTA() {
 
               {/* CTA Buttons */}
               <div className="cta-buttons">
-                <button 
+                <button
                   className="btn btn-primary btn-lg"
                   onClick={handleScrollToForm}
                 >
@@ -78,15 +130,19 @@ export default function CTA() {
               <p>Fill in your details and we'll call you within 2 hours!</p>
             </div>
 
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="parent-name">Parent's Name *</label>
                 <input
                   type="text"
                   id="parent-name"
+                  name="parentName"
+                  value={formData.parentName}
+                  onChange={handleChange}
                   placeholder="Enter your name"
                   required
                 />
+
               </div>
 
               <div className="form-group">
@@ -94,6 +150,9 @@ export default function CTA() {
                 <input
                   type="tel"
                   id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   placeholder="+91 98765 43210"
                   required
                 />
@@ -101,7 +160,13 @@ export default function CTA() {
 
               <div className="form-group">
                 <label htmlFor="child-age">Child's Age *</label>
-                <select id="child-age" required>
+                <select
+                  id="child-age"
+                  name="childAge"
+                  value={formData.childAge}
+                  onChange={handleChange}
+                  required
+                >
                   <option value="">Select age</option>
                   <option value="4-6">4-6 years</option>
                   <option value="7-9">7-9 years</option>
@@ -112,7 +177,13 @@ export default function CTA() {
 
               <div className="form-group">
                 <label htmlFor="activity">Interested Activity *</label>
-                <select id="activity" required>
+                <select
+                  id="activity"
+                  name="activity"
+                  value={formData.activity}
+                  onChange={handleChange}
+                  required
+                >
                   <option value="">Choose activity</option>
                   <option value="self-defense">Self Defense</option>
                   <option value="dance">Dance</option>
@@ -139,11 +210,11 @@ export default function CTA() {
         {/* Urgency Banner */}
         <div className="cta-content urgency-banner">
           {/* <div className="urgency-banner"> */}
-            <div className="urgency-content">
-              <span className="urgency-badge">Limited Spots Available</span>
-              <p>Only <strong>12 spots left</strong> for this month's intake. Book now to secure your child's place!</p>
-              {/* <p>Only <strong>12 spots left</strong> this month. Book now!</p> */}
-            </div>
+          <div className="urgency-content">
+            <span className="urgency-badge">Limited Spots Available</span>
+            <p>Only <strong>12 spots left</strong> for this month's intake. Book now to secure your child's place!</p>
+            {/* <p>Only <strong>12 spots left</strong> this month. Book now!</p> */}
+          </div>
           {/* </div> */}
         </div>
       </div>
