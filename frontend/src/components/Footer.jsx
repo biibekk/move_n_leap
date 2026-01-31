@@ -13,14 +13,14 @@ export default function Footer() {
           <div className="footer-section">
             <div className="footer-logo">
               <img
-              src={`${process.env.PUBLIC_URL}/transparent_favicon-32x32.png`}
-              alt="Move N Leap"
-              className="logo-img"
-            />
+                src={`${process.env.PUBLIC_URL}/transparent_favicon-32x32.png`}
+                alt="Move N Leap"
+                className="logo-img"
+              />
               <span>Move N Leap</span>
             </div>
             <p className="footer-description">
-              Empowering children through expert-led programs in Self Defense, Dance, Drama, Chess & more. 
+              Empowering children through expert-led programs in Self Defense, Dance, Drama, Chess & more.
               Building confidence, discipline, and lifelong skills since 2010.
             </p>
             <div className="footer-social">

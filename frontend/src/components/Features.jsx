@@ -56,15 +56,15 @@ export default function Features() {
             Comprehensive Development for Your Child
           </h2>
           <p className="section-description">
-            Our programs are designed by child development experts to nurture every aspect 
+            Our programs are designed by child development experts to nurture every aspect
             of your child's growth – mind, body, and character.
           </p>
         </div>
 
         <div className="features-grid">
           {features.map((feature, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="feature-card"
               style={{ '--feature-color': feature.color }}
             >

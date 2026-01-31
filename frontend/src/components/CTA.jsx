@@ -21,6 +21,7 @@ export default function CTA() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // Stops the browser from refreshing the page
 
     // console.log("Parent Lead:", formData); 
 
@@ -28,19 +29,21 @@ export default function CTA() {
     // alert("Thank you! We’ll call you shortly.");
 
     try {
-      const res = await fetch("http://localhost:4000/parent_lead", {
+      const res = await fetch("http://localhost:4000/parent_leads_db", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
+        // Converts JavaScript object → JSON string
+        // Servers can’t read JS objects directly
       });
-      
+
       const data = await res.json();
       console.log("Server response:", data);
 
-      alert("Form submitted successfully!");    
-    } catch(error){
+      alert("Form submitted successfully!");
+    } catch (error) {
       console.error("Error submitting form:", error);
       alert("Error submitting form. Please try again later.");
     }

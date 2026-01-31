@@ -55,7 +55,7 @@ export default function Activities({ scrollToSection, sections }) {
         name: "Arjun Mehta",
         credentials: "Theater Arts Graduate, NSD Certified",
         experience: "12+ years in theater and drama coaching",
-        info: ""  
+        info: ""
       }
     },
     {
@@ -71,7 +71,7 @@ export default function Activities({ scrollToSection, sections }) {
         name: "Grandmaster Vikram Singh",
         credentials: "FIDE Master, International Chess Federation",
         experience: "20+ years coaching young chess players",
-        info: ""  
+        info: ""
       }
     },
     {
@@ -87,7 +87,7 @@ export default function Activities({ scrollToSection, sections }) {
         name: "Anjali Desai",
         credentials: "Certified Yoga Instructor, Fitness Trainer",
         experience: "8+ years in youth fitness and wellness",
-        info: ""    
+        info: ""
       }
     },
     {

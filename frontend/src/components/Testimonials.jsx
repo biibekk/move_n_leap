@@ -62,7 +62,7 @@ export default function Testimonials() {
             What Parents Say About Us
           </h2>
           <p className="section-description">
-            Don't just take our word for it. Here's what real parents have to say 
+            Don't just take our word for it. Here's what real parents have to say
             about their children's experience at Move N Leap Academy.
           </p>
         </div>
@@ -108,7 +108,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="testimonial-card">
               <Quote className="quote-icon" />
-              
+
               <div className="testimonial-rating">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="star-icon filled" />
