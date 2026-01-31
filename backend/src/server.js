@@ -1,7 +1,10 @@
-require('dotenv').config();
+require("dotenv").config({ path: require("path").resolve(__dirname, "../.env") });
+
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+
+const parentEnquiryRoute = require("./routes/parentEnquiry");
 
 const app = express();
 
@@ -28,6 +31,7 @@ app.get("/test", (req, res) => {
   res.send("Backend is working");
 });
 
+app.use("/routes/parentEnquiry", parentEnquiryRoute);
 
 app.post('/local_parent_lead', (req, res) => {
     console.log(req.body);

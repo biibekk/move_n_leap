@@ -29,7 +29,7 @@ export default function CTA() {
     // alert("Thank you! We’ll call you shortly.");
 
     try {
-      const res = await fetch("http://localhost:4000/parent_leads_db", {
+      const res = await fetch("http://localhost:4000/routes/parentEnquiry", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,7 +42,7 @@ export default function CTA() {
       const data = await res.json();
       console.log("Server response:", data);
 
-      alert("Form submitted successfully!");
+      alert("Thank you! We will contact you soon.");
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Error submitting form. Please try again later.");
