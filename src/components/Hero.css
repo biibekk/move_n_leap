@@ -45,7 +45,7 @@
   flex: 1;
   display: flex;
   align-items: center;
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 .hero-grid {
@@ -149,7 +149,7 @@
 }
 
 .btn-cta-hero-outline:hover {
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--primary-color)
 }
 
 /* Social Proof */

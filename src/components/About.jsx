@@ -31,10 +31,12 @@ export default function About() {
         <div className="about-grid">
           {/* Left Content */}
           <div className="about-content">
-            <span className="section-label">About Move N Leap</span>
-            <h2 className="section-title">
-              Trusted by Parents, Loved by Kids
-            </h2>
+            <div className="about-header">
+              <span className="section-label">About Move N Leap</span>
+              <h2 className="section-title">
+                Trusted by Parents, Loved by Kids
+              </h2>
+            </div>
             <p className="about-text">
               Move N Leap Academy was founded in 2010 with a simple mission: to provide
               a safe, nurturing environment where children can discover their passions and
@@ -66,7 +68,7 @@ export default function About() {
               <a href="#book-trial" className="btn btn-primary">
                 Book Free Trial Class
               </a>
-              <a href="#contact" className="btn btn-outline">
+              <a href="#contact" className="btn btn-outline btn-cta-about-outline">
                 Visit Our Facility
               </a>
             </div>
@@ -107,8 +109,10 @@ export default function About() {
                 />
               </div>
               <div className="founder-info">
-                <h4>Sarah Mitchell</h4>
-                <span className="founder-role">Founder & CEO</span>
+                <div className="founders-header">
+                  <h4>Sarah Mitchell</h4>
+                  <span className="founder-role">Founder & CEO</span>
+                </div>
                 <p className="founder-bio">
                   With over 20 years of experience in child development and education,
                   Sarah founded Move N Leap to create a space where every child can thrive.
@@ -126,8 +130,10 @@ export default function About() {
                 />
               </div>
               <div className="founder-info">
-                <h4>David Chen</h4>
-                <span className="founder-role">Co-Founder & Program Director</span>
+                <div className="founders-header">
+                  <h4>David Chen</h4>
+                  <span className="founder-role">Co-Founder & Program Director</span>
+                </div>
                 <p className="founder-bio">
                   A former professional athlete and sports educator, David brings his
                   passion for physical fitness and holistic development to Move N Leap.

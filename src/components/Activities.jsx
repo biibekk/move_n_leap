@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Swords, Music, Drama, Crown, Dumbbell, Palette } from 'lucide-react';
+import { SquareActivity, ShieldCheck, Activity, Swords, Music, Drama, Crown, Dumbbell, Palette } from 'lucide-react';
 import './Activities.css';
 
 export default function Activities({ scrollToSection, sections }) {
@@ -11,18 +11,19 @@ export default function Activities({ scrollToSection, sections }) {
   };
   const activities = [
     {
-      icon: <Swords />,
+      icon: <ShieldCheck />,
       title: "Self Defense",
       ageGroup: "Ages 5-16",
       description: "Build discipline, respect, and self-defense skills with certified black belt instructors.",
       benefits: ["Physical fitness", "Mental discipline", "Self-confidence", "Belt progression"],
       image: "https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80",
-      schedule: "Mon, Wed, Fri - 4:00 PM to 5:30 PM",
+      schedule: "Tue, Thu, Sat - 6:00 PM to 7:00 PM",
       color: "#ef4444",
       instructor: {
-        name: "Sensei Rajesh Kumar",
-        credentials: "5th Dan Black Belt, National Champion",
-        experience: "15+ years teaching martial arts to children"
+        name: "Bibek Shrestha",
+        credentials: "1st Dan Black Belt",
+        experience: "3+ years teaching martial arts to children",
+        info: "Classes are structured, safety-first, and focused on building confidence, discipline, and respectful behavior — not aggression."
       }
     },
     {
@@ -37,7 +38,8 @@ export default function Activities({ scrollToSection, sections }) {
       instructor: {
         name: "Priya Sharma",
         credentials: "Professional Choreographer, Dance Academy Graduate",
-        experience: "10+ years in dance education and performance"
+        experience: "10+ years in dance education and performance",
+        info: ""
       }
     },
     {
@@ -52,7 +54,8 @@ export default function Activities({ scrollToSection, sections }) {
       instructor: {
         name: "Arjun Mehta",
         credentials: "Theater Arts Graduate, NSD Certified",
-        experience: "12+ years in theater and drama coaching"
+        experience: "12+ years in theater and drama coaching",
+        info: ""  
       }
     },
     {
@@ -67,11 +70,12 @@ export default function Activities({ scrollToSection, sections }) {
       instructor: {
         name: "Grandmaster Vikram Singh",
         credentials: "FIDE Master, International Chess Federation",
-        experience: "20+ years coaching young chess players"
+        experience: "20+ years coaching young chess players",
+        info: ""  
       }
     },
     {
-      icon: <Dumbbell />,
+      icon: <Activity />,
       title: "Fitness & Yoga",
       ageGroup: "Ages 8-16",
       description: "Comprehensive fitness program combining yoga, strength training, and flexibility.",
@@ -82,7 +86,8 @@ export default function Activities({ scrollToSection, sections }) {
       instructor: {
         name: "Anjali Desai",
         credentials: "Certified Yoga Instructor, Fitness Trainer",
-        experience: "8+ years in youth fitness and wellness"
+        experience: "8+ years in youth fitness and wellness",
+        info: ""    
       }
     },
     {
@@ -97,7 +102,8 @@ export default function Activities({ scrollToSection, sections }) {
       instructor: {
         name: "Kavita Reddy",
         credentials: "Fine Arts Graduate, Art Education Specialist",
-        experience: "11+ years teaching art to children"
+        experience: "11+ years teaching art to children",
+        info: ""
       }
     }
   ];
@@ -169,10 +175,11 @@ export default function Activities({ scrollToSection, sections }) {
                   <p className="instructor-name">{activity.instructor.name}</p>
                   <p className="instructor-credentials">{activity.instructor.credentials}</p>
                   <p className="instructor-experience">{activity.instructor.experience}</p>
+                  <p className="instructor-class-info">{activity.instructor.info}</p>
                 </div>
 
                 <a href="#book-trial" className="activity-btn">
-                  Book Free Trial Class →
+                  Book Free Trial Class
                 </a>
               </div>
             </div>
