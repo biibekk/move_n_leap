@@ -5,7 +5,7 @@ const Lead = require("../models/lead.js");
 const router = express.Router();
 
 router.post("/", async (req, res) => {
-  const { parentName, phone, childAge, message } = req.body;
+  const { parentName, phone, childAge, activity } = req.body;
 
   try {
     // SAVE TO DATABASE FIRST
@@ -13,18 +13,21 @@ router.post("/", async (req, res) => {
       parentName,
       phone,
       childAge,
-      message,
+      activity,
     });
 
     console.log("Saved to DB:", savedLead._id);
 
     // SEND EMAIL ONLY IF DB SAVE SUCCEEDS
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true, // Use SSL
       auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,
       },
+      connectionTimeout: 10000, // 10 seconds timeout
     });
 
     await transporter.sendMail({
@@ -36,7 +39,7 @@ router.post("/", async (req, res) => {
         <p><b>Parent Name:</b> ${parentName}</p>
         <p><b>Phone:</b> ${phone}</p>
         <p><b>Child Age:</b> ${childAge}</p>
-        <p><b>Message:</b><br/>${message}</p>
+        <p><b>Activity:</b> ${activity}</p>
       `,
     });
 
