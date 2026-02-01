@@ -43,7 +43,11 @@ export default function CTA() {
       const data = await res.json();
       console.log("Server response:", data);
 
-      alert("Thank you! We will contact you soon.");
+      if (data.success) {
+        alert(data.message);
+      } else {
+        alert(data.message || "Something went wrong. Please try again later.");
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Error submitting form. Please try again later.");
