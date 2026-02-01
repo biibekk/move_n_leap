@@ -70,7 +70,7 @@ export default function Testimonials() {
         {/* Rating Summary */}
         <div className="rating-summary">
           <div className="rating-box">
-            <strong>4.9</strong>
+            <strong>4.8</strong>
             <div className="stars">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="star-icon filled" />
@@ -139,7 +139,7 @@ export default function Testimonials() {
             <span className="trust-label">Happy Families</span>
           </div>
           <div className="trust-item">
-            <span className="trust-number">4.9/5</span>
+            <span className="trust-number">4.8/5</span>
             <span className="trust-label">Average Rating</span>
           </div>
           <div className="trust-item">

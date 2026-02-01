@@ -129,7 +129,7 @@ export default function Hero({ scrollToSection, aboutRef, ctaRef }) {
                 <div className="floating-stat stat-2">
                   <div className="stat-icon"><Star /></div>
                   <div>
-                    <strong>4.9/5</strong>
+                    <strong>4.8/5</strong>
                     <span>Parent Rating</span>
                   </div>
                 </div>

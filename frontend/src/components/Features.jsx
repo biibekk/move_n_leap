@@ -97,7 +97,7 @@ export default function Features() {
             <span>Years of Excellence</span>
           </div>
           <div className="stat-card">
-            <strong>4.9/5</strong>
+            <strong>4.8/5</strong>
             <span>Average Rating</span>
           </div>
         </div>

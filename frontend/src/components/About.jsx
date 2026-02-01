@@ -1,4 +1,4 @@
-import { Award, Shield, Users, Target } from 'lucide-react';
+import { Award, Shield, Users, Target, MapPin } from 'lucide-react';
 import './About.css';
 
 export default function About() {
@@ -68,7 +68,14 @@ export default function About() {
               <a href="#book-trial" className="btn btn-primary">
                 Book Free Trial Class
               </a>
-              <a href="#contact" className="btn btn-outline btn-cta-about-outline">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=B-115,+C+Block,+Sector+40,+Noida,+Uttar+Pradesh+201303"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline btn-cta-about-outline"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+              >
+                <MapPin size={18} />
                 Visit Our Facility
               </a>
             </div>

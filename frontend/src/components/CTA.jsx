@@ -1,4 +1,4 @@
-import { Calendar, CheckCircle, ArrowRight } from 'lucide-react';
+import { Calendar, CheckCircle, ArrowRight, Flame } from 'lucide-react';
 import { useState } from "react";
 
 import './CTA.css';
@@ -78,7 +78,7 @@ export default function CTA() {
                 Ready to Transform Your Child's Future?
               </h2>
               <p className="cta-description">
-                Join 500+ families who've already discovered the Move N Leap difference.
+                Join 200+ families who've already discovered the Move N Leap difference.
                 Book your free trial class today – no credit card required, no strings attached.
               </p>
 
@@ -110,8 +110,8 @@ export default function CTA() {
                 >
                   Book Your Free Trial Now
                 </button>
-                <a href="tel:+919876543210" className="btn btn-secondary btn-lg">
-                  Call Us: +91 98765 43210
+                <a href="tel:+919319693858" className="btn btn-secondary btn-lg">
+                  Call Us: +91 9319693858
                 </a>
               </div>
 
@@ -156,7 +156,7 @@ export default function CTA() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="+91 98765 43210"
+                  placeholder="+91 9876543210"
                   required
                 />
               </div>
@@ -214,7 +214,10 @@ export default function CTA() {
         <div className="cta-content urgency-banner">
           {/* <div className="urgency-banner"> */}
           <div className="urgency-content">
-            <span className="urgency-badge">Limited Spots Available</span>
+            <span className="urgency-badge">
+              <Flame className="badge-icon" />
+              Limited Spots Available
+            </span>
             <p>Only <strong>12 spots left</strong> for this month's intake. Book now to secure your child's place!</p>
             {/* <p>Only <strong>12 spots left</strong> this month. Book now!</p> */}
           </div>

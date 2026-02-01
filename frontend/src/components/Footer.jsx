@@ -71,15 +71,15 @@ export default function Footer() {
             <ul className="footer-contact">
               <li>
                 <MapPin className="contact-icon" />
-                <span>Sector 40, Noida<br />Noida 201301, India</span>
+                <span>B-115, C Block, Sector 40, Noida,<br />Uttar Pradesh 201303, India</span>
               </li>
               <li>
                 <Phone className="contact-icon" />
-                <a href="tel:+919876543210">+91 98765 43210</a>
+                <a href="tel:+919319693858">+91 9319693858</a>
               </li>
               <li>
                 <Mail className="contact-icon" />
-                <a href="mailto:info@movenleap.com">info@movenleap.com</a>
+                <a href="mailto:movenleapacademy@gmail.com">movenleapacademy@gmail.com</a>
               </li>
               <li>
                 <Clock className="contact-icon" />
@@ -109,7 +109,7 @@ export default function Footer() {
           <div className="badge-item">
             {/* <span className="badge-icon">⭐</span> */}
             <Star className="proof-icon" />
-            <span>4.9/5 Rated</span>
+            <span>4.8/5 Rated</span>
           </div>
         </div>
 

@@ -71,8 +71,8 @@ export default function Navbar({ scrolled, isMenuOpen, setIsMenuOpen, scrollToSe
 
             {/* Phone & CTA */}
             <div className="nav-actions">
-              <a href="tel:+919876543210" className="nav-phone">
-                <span role="img" aria-label="phone">📞</span> +91 98765 43210
+              <a href="tel:+919319693858" className="nav-phone">
+                <span role="img" aria-label="phone">📞</span> +91 93196 93858
               </a>
               <button
                 className="btn btn-primary btn-sm"
