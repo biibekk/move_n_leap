@@ -29,8 +29,8 @@ router.post("/", async (req, res) => {
     // ATTEMPT TO SEND EMAIL IN THE BACKGROUND VIA RESEND
     const transporter = nodemailer.createTransport({
       host: "smtp.resend.com",
-      port: 465,
-      secure: true,
+      port: 587,
+      secure: false, // Use STARTTLS (Port 587)
       auth: {
         user: "resend", // This is literal text "resend"
         pass: process.env.RESEND_API_KEY,
