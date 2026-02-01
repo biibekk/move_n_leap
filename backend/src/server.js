@@ -10,13 +10,13 @@ const app = express();
 
 // connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
-    .then(() => console.log("Connected to MongoDB"))
-    .catch((err) => console.log(err));
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.log(err));
 
 // middleware
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: process.env.FRONTEND_URL || "http://localhost:3000",
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type"],
   })
@@ -54,5 +54,5 @@ app.use("/routes/parentEnquiry", parentEnquiryRoute);
 // server
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });

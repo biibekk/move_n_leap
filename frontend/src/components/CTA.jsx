@@ -29,7 +29,8 @@ export default function CTA() {
     // alert("Thank you! We’ll call you shortly.");
 
     try {
-      const res = await fetch("http://localhost:4000/routes/parentEnquiry", {
+      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:4000";
+      const res = await fetch(`${apiUrl}/routes/parentEnquiry`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
