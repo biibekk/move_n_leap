@@ -24,29 +24,32 @@ router.post("/", async (req, res) => {
       message: "Enquiry received! We will call you soon.",
     });
 
-    // ATTEMPT TO SEND EMAIL IN THE BACKGROUND
+    // In backend/src/routes/parentEnquiry.js
+
+    // ATTEMPT TO SEND EMAIL IN THE BACKGROUND VIA RESEND
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.resend.com",
+      port: 465,
+      secure: true,
       auth: {
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS,
+        user: "resend", // This is literal text "resend"
+        pass: process.env.RESEND_API_KEY,
       },
     });
 
-    // Don't 'await' this so the user doesn't wait for the email connection
     transporter.sendMail({
-      from: `"MovenLeap Website" <${process.env.MAIL_USER}>`,
+      from: "MovenLeap <onboarding@resend.dev>", // For free accounts, use this 'from' address
       to: process.env.CLIENT_EMAIL,
       subject: "New Parent Enquiry",
       html: `
         <h3>New Enquiry Received</h3>
         <p><b>Parent Name:</b> ${parentName}</p>
-        <p><b>Phone:</b> ${phone}</p>
+        <p><b>Phone:</b> ${phone}</p> 
         <p><b>Child Age:</b> ${childAge}</p>
         <p><b>Activity:</b> ${activity}</p>
       `,
-    }).then(() => console.log("Email sent successfully"))
-      .catch(err => console.error("Background Email Error:", err));
+    }).then(() => console.log("Email sent successfully via Resend"))
+      .catch(err => console.error("Resend Email Error:", err));
 
   } catch (error) {
     console.error("Enquiry Database Error:", error);
