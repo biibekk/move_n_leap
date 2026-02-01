@@ -8,14 +8,17 @@ router.post("/", async (req, res) => {
   const { parentName, phone, childAge, message } = req.body;
 
   try {
-    await Lead.create(req.body);
-    console.log(req.body);
-    // res.status(201).json({ success: true });
-  } catch (err) {
-    res.status(500).json({ success: false });
-  }
+    // SAVE TO DATABASE FIRST
+    const savedLead = await Lead.create({
+      parentName,
+      phone,
+      childAge,
+      message,
+    });
 
-  try {
+    console.log("Saved to DB:", savedLead._id);
+
+    // SEND EMAIL ONLY IF DB SAVE SUCCEEDS
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -26,7 +29,7 @@ router.post("/", async (req, res) => {
 
     await transporter.sendMail({
       from: `"MovenLeap Website" <${process.env.MAIL_USER}>`,
-      to: process.env.CLIENT_EMAIL, // academy head
+      to: process.env.CLIENT_EMAIL,
       subject: "New Parent Enquiry",
       html: `
         <h3>New Enquiry</h3>
@@ -37,15 +40,18 @@ router.post("/", async (req, res) => {
       `,
     });
 
-    return res.status(200).json({
+    // FINAL RESPONSE
+    return res.status(201).json({
       success: true,
-      message: "Enquiry email sent",
+      message: "Enquiry saved and email sent",
     });
+
   } catch (error) {
-    console.error("Email error:", error);
+    console.error("Enquiry error:", error);
+
     return res.status(500).json({
       success: false,
-      message: "Failed to send email",
+      message: "Failed to process enquiry",
     });
   }
 });

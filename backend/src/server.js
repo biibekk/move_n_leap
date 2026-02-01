@@ -8,8 +8,6 @@ const parentEnquiryRoute = require("./routes/parentEnquiry");
 
 const app = express();
 
-const Lead = require("./models/lead.js");
-
 // connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log("Connected to MongoDB"))
@@ -33,24 +31,24 @@ app.get("/test", (req, res) => {
 
 app.use("/routes/parentEnquiry", parentEnquiryRoute);
 
-app.post('/local_parent_lead', (req, res) => {
-    console.log(req.body);
-    res.status(200).json({
-        success: true,
-        message: "Parent lead received successfully"
-    });
-});
+// app.post('/local_parent_lead', (req, res) => {
+//     console.log(req.body);
+//     res.status(200).json({
+//         success: true,
+//         message: "Parent lead received successfully"
+//     });
+// });
 
 
-app.post("/parent_leads_db", async (req, res) => {
-  try {
-    await Lead.create(req.body);
-    console.log(req.body);
-    res.status(201).json({ success: true });
-  } catch (err) {
-    res.status(500).json({ success: false });
-  }
-});
+// app.post("/parent_leads_db", async (req, res) => {
+//   try {
+//     await Lead.create(req.body);
+//     console.log(req.body);
+//     res.status(201).json({ success: true });
+//   } catch (err) {
+//     res.status(500).json({ success: false });
+//   }
+// });
 
 
 // server
