@@ -34,7 +34,7 @@ export default function About() {
             <div className="about-header">
               <span className="section-label">About Move N Leap</span>
               <h2 className="section-title">
-                Trusted by Parents, Loved by Kids
+                Noida's Most Trusted Academy for Kids
               </h2>
             </div>
             <p className="about-text">
@@ -79,13 +79,15 @@ export default function About() {
             <div className="image-main">
               <img
                 src="https://s3.ap-south-1.amazonaws.com/assets.klayschools.com/wp-content/uploads/2024/08/30163826/2-3.jpg"
-                alt="Happy children at Move N Leap Academy"
+                alt="Happy students learning at Move N Leap Academy in Noida"
+                loading="lazy"
               />
             </div>
             <div className="image-secondary">
               <img
                 src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&q=80"
-                alt="Children learning at academy"
+                alt="Kids performing yoga and fitness at Noida academy"
+                loading="lazy"
               />
             </div>
 
@@ -106,6 +108,7 @@ export default function About() {
                 <img
                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80"
                   alt="Sarah Mitchell - Founder"
+                  loading="lazy"
                 />
               </div>
               <div className="founder-info">
@@ -127,6 +130,7 @@ export default function About() {
                 <img
                   src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80"
                   alt="David Chen - Co-Founder"
+                  loading="lazy"
                 />
               </div>
               <div className="founder-info">

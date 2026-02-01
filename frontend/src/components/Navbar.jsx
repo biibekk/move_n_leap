@@ -15,16 +15,16 @@ export default function Navbar({ scrolled, isMenuOpen, setIsMenuOpen, scrollToSe
               alt="Move N Leap"
               className="logo-img"
             />
-            <span onClick={(e) => { 
-                  e.preventDefault(); 
-                  scrollToSection(heroRef); 
-                }}>
-                    Move N Leap
+            <span onClick={(e) => {
+              e.preventDefault();
+              scrollToSection(heroRef);
+            }}>
+              Move N Leap
             </span>
           </div>
 
           {/* Mobile Toggle */}
-          <button 
+          <button
             className="nav-toggle"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
@@ -36,33 +36,33 @@ export default function Navbar({ scrolled, isMenuOpen, setIsMenuOpen, scrollToSe
           <div className={`nav-right ${isMenuOpen ? 'active' : ''}`}>
             <ul className="nav-menu">
               <li>
-                <a onClick={(e) => { 
-                  e.preventDefault(); 
-                  scrollToSection(activitiesRef); 
+                <a href="#activities" onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(activitiesRef);
                 }}>
                   Programs
                 </a>
               </li>
               <li>
-                <a onClick={(e) => { 
-                  e.preventDefault(); 
-                  scrollToSection(featuresRef); 
+                <a href="#features" onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(featuresRef);
                 }}>
                   Why Us
                 </a>
               </li>
               <li>
-                <a onClick={(e) => { 
-                  e.preventDefault(); 
-                  scrollToSection(aboutRef); 
+                <a href="#about" onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(aboutRef);
                 }}>
                   Founders
                 </a>
               </li>
               <li>
-                <a onClick={(e) => { 
-                  e.preventDefault(); 
-                  scrollToSection(testimonialsRef); 
+                <a href="#testimonials" onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(testimonialsRef);
                 }}>
                   Testimonials
                 </a>
@@ -72,9 +72,9 @@ export default function Navbar({ scrolled, isMenuOpen, setIsMenuOpen, scrollToSe
             {/* Phone & CTA */}
             <div className="nav-actions">
               <a href="tel:+919876543210" className="nav-phone">
-                📞 +91 98765 43210
+                <span role="img" aria-label="phone">📞</span> +91 98765 43210
               </a>
-              <button 
+              <button
                 className="btn btn-primary btn-sm"
                 onClick={() => scrollToSection(ctaRef)}
               >

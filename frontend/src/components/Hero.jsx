@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Award, Shield, Users, CheckCircle } from 'lucide-react';
+import { Trophy, Award, Shield, Users, CheckCircle, Star } from 'lucide-react';
 import './Hero.css';
 
-export default function Hero() {
+export default function Hero({ scrollToSection, aboutRef, ctaRef }) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -35,9 +35,9 @@ export default function Hero() {
                 </div>
 
                 <h1 className="hero-title">
-                  Transform Your Child's
+                  The Best Kids Academy in Noida for
                   <span className="highlight"> &nbsp;Confidence&nbsp; </span>
-                  in 30 Days
+                  & <span className="highlight">Skills</span>
                 </h1>
               </div>
 
@@ -69,12 +69,18 @@ export default function Hero() {
 
               {/* CTA Buttons */}
               <div className="hero-cta">
-                <a href="#book-trial" className="btn btn-primary btn-lg">
+                <button
+                  onClick={() => scrollToSection(ctaRef)}
+                  className="btn btn-primary btn-lg"
+                >
                   Book Your Free Trial Class
-                </a>
-                <a href="#learn-more" className="btn btn-outline btn-cta-hero-outline">
+                </button>
+                <button
+                  onClick={() => scrollToSection(aboutRef)}
+                  className="btn btn-outline btn-cta-hero-outline"
+                >
                   Learn More
-                </a>
+                </button>
               </div>
 
               {/* Social Proof */}
@@ -108,19 +114,20 @@ export default function Hero() {
               <div className="image-wrapper">
                 <img
                   src="https://www.teachhub.com/wp-content/uploads/2020/05/Top-10-Indoor-Games-scaled.jpg"
-                  alt="Happy children learning and playing"
+                  alt="Children participating in fun educational activities at Move N Leap Academy Noida"
                   className="hero-img"
+                  fetchpriority="high"
                 />
                 {/* Floating Stats */}
                 <div className="floating-stat stat-1">
-                  <div className="stat-icon">🏆</div>
+                  <div className="stat-icon"><Trophy /></div>
                   <div>
                     <strong>98%</strong>
                     <span>Success Rate</span>
                   </div>
                 </div>
                 <div className="floating-stat stat-2">
-                  <div className="stat-icon">⭐</div>
+                  <div className="stat-icon"><Star /></div>
                   <div>
                     <strong>4.9/5</strong>
                     <span>Parent Rating</span>

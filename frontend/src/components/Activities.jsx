@@ -114,7 +114,7 @@ export default function Activities({ scrollToSection, sections }) {
         <div className="activities-header">
           <span className="section-label">Our Programs</span>
           <h2 className="section-title">
-            Discover Your Child's Passion
+            Kids Extracurricular Activities in Noida
           </h2>
           <p className="section-description">
             Expertly designed programs that combine fun with structured learning.
@@ -131,7 +131,7 @@ export default function Activities({ scrollToSection, sections }) {
               onClick={() => toggleCard(index)}
             >
               <div className="activity-image">
-                <img src={activity.image} alt={activity.title} />
+                <img src={activity.image} alt={activity.title} loading="lazy" />
                 <div className="activity-overlay">
                   <div className="activity-icon">
                     {activity.icon}

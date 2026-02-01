@@ -76,12 +76,19 @@ export default function FAQ() {
                 <button
                   className="faq-question"
                   onClick={() => toggleFAQ(index)}
+                  aria-expanded={openIndex === index}
+                  aria-controls={`faq-answer-${index}`}
                 >
                   <HelpCircle className="faq-icon" />
                   <span>{faq.question}</span>
                   <ChevronDown className={`chevron ${openIndex === index ? 'rotate' : ''}`} />
                 </button>
-                <div className="faq-answer">
+                <div
+                  id={`faq-answer-${index}`}
+                  className="faq-answer"
+                  role="region"
+                  aria-hidden={openIndex !== index}
+                >
                   <p>{faq.answer}</p>
                 </div>
               </div>

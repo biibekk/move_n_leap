@@ -219,45 +219,63 @@
 /* Floating Stats */
 .floating-stat {
   position: absolute;
-  background: white;
-  padding: 1rem 1.5rem;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-xl);
+  /* background: white; */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  animation: float 3s ease-in-out infinite;
+  gap: 0.6rem;
+  animation: float 6s ease-in-out infinite;
+  z-index: 5;
 }
 
 .stat-1 {
-  top: 10%;
-  right: -10%;
+  top: 5%;
+  right: -5%;
   animation-delay: 0s;
 }
 
 .stat-2 {
-  bottom: 10%;
-  left: -10%;
+  bottom: 8%;
+  left: -8%;
   animation-delay: 1s;
 }
 
 .stat-icon {
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+}
+
+.stat-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2px;
 }
 
 .floating-stat strong {
   display: block;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: white;
   line-height: 1;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .floating-stat span {
   display: block;
-  font-size: 0.875rem;
-  color: var(--text-secondary);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes float {
@@ -268,7 +286,7 @@
   }
 
   50% {
-    transform: translateY(-15px);
+    transform: translateY(-8px);
   }
 }
 
@@ -348,7 +366,7 @@
     flex-direction: column;
   }
 
-  .btn{
+  .btn {
     width: 100%;
     justify-content: center;
   }

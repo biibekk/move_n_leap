@@ -69,7 +69,7 @@ export default function Features() {
               style={{ '--feature-color': feature.color }}
             >
               <div className="feature-icon-wrapper">
-                <img src={feature.image} alt={feature.title} className="feature-bg-image" />
+                <img src={feature.image} alt={`Move N Leap ${feature.title} program for kids in Noida`} className="feature-bg-image" loading="lazy" />
                 <div className="feature-icon-overlay">
                   {/* <div className="feature-icon">
                     {feature.icon}

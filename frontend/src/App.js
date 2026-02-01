@@ -68,7 +68,9 @@ export default function App() {
         }}
       />
 
-      <section ref={heroRef}><Hero /></section>
+      <section ref={heroRef}>
+        <Hero scrollToSection={scrollToSection} aboutRef={aboutRef} ctaRef={ctaRef} />
+      </section>
       <section ref={featuresRef}><Features /></section>
       <section ref={activitiesRef}>
         <Activities scrollToSection={scrollToSection} sections={{ ctaRef }} />
