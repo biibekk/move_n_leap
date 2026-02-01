@@ -11,7 +11,7 @@ export default function Navbar({ scrolled, isMenuOpen, setIsMenuOpen, scrollToSe
           {/* Logo */}
           <div className="logo">
             <img
-              src={`${process.env.PUBLIC_URL}/transparent_favicon-32x32.png`}
+              src={`${process.env.PUBLIC_URL}/favicon-32x32.png`}
               alt="Move N Leap"
               className="logo-img"
             />
@@ -75,7 +75,7 @@ export default function Navbar({ scrolled, isMenuOpen, setIsMenuOpen, scrollToSe
                 <span role="img" aria-label="phone">📞</span> +91 93196 93858
               </a>
               <button
-                className="btn btn-primary btn-sm"
+                className="btn btn-primary btn-sm shimmer-btn"
                 onClick={() => scrollToSection(ctaRef)}
               >
                 Book Demo

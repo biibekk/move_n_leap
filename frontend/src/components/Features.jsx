@@ -1,7 +1,7 @@
 import { Brain, Heart, Trophy, Users, Shield, Star } from 'lucide-react';
 import './Features.css';
 
-export default function Features() {
+export default function Features({ scrollToSection, ctaRef }) {
   const features = [
     {
       icon: <Brain />,
@@ -100,6 +100,17 @@ export default function Features() {
             <strong>4.8/5</strong>
             <span>Average Rating</span>
           </div>
+        </div>
+
+        {/* Micro-CTA */}
+        <div className="section-footer-cta">
+          <h3>Ready to see these benefits in action?</h3>
+          <button
+            onClick={() => scrollToSection(ctaRef)}
+            className="btn btn-primary shimmer-btn"
+          >
+            Book Your Free Trial Class
+          </button>
         </div>
       </div>
     </section>

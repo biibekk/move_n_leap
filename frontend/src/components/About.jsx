@@ -1,7 +1,7 @@
 import { Award, Shield, Users, Target, MapPin } from 'lucide-react';
 import './About.css';
 
-export default function About() {
+export default function About({ scrollToSection, ctaRef }) {
   const credentials = [
     {
       icon: <Award />,
@@ -21,7 +21,7 @@ export default function About() {
     {
       icon: <Target />,
       title: "Proven Track Record",
-      description: "500+ successful students with measurable improvements in confidence and skills."
+      description: "200+ successful students with measurable improvements in confidence and skills."
     }
   ];
 
@@ -38,7 +38,7 @@ export default function About() {
               </h2>
             </div>
             <p className="about-text">
-              Move N Leap Academy was founded in 2010 with a simple mission: to provide
+              Move N Leap Academy was founded with a simple mission: to provide
               a safe, nurturing environment where children can discover their passions and
               develop essential life skills beyond the classroom.
             </p>
@@ -65,9 +65,12 @@ export default function About() {
             </div>
 
             <div className="about-cta">
-              <a href="#book-trial" className="btn btn-primary">
+              <button
+                onClick={() => scrollToSection(ctaRef)}
+                className="btn btn-primary shimmer-btn"
+              >
                 Book Free Trial Class
-              </a>
+              </button>
               <a
                 href="https://www.google.com/maps/dir/?api=1&destination=B-115,+C+Block,+Sector+40,+Noida,+Uttar+Pradesh+201303"
                 target="_blank"
@@ -174,6 +177,17 @@ export default function About() {
             <strong>5,000+</strong>
             <span>Classes Conducted</span>
           </div>
+        </div>
+
+        {/* Micro-CTA */}
+        <div className="section-footer-cta">
+          <h3>Join our legacy of excellence in Noida.</h3>
+          <button
+            onClick={() => scrollToSection(ctaRef)}
+            className="btn btn-primary shimmer-btn"
+          >
+            Claim Your Free Trial
+          </button>
         </div>
       </div>
     </section>

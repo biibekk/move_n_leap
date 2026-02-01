@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="footer-section">
             <div className="footer-logo">
               <img
-                src={`${process.env.PUBLIC_URL}/transparent_favicon-32x32.png`}
+                src={`${process.env.PUBLIC_URL}/favicon-32x32.png`}
                 alt="Move N Leap"
                 className="logo-img"
               />

@@ -71,7 +71,7 @@ export default function Hero({ scrollToSection, aboutRef, ctaRef }) {
               <div className="hero-cta">
                 <button
                   onClick={() => scrollToSection(ctaRef)}
-                  className="btn btn-primary btn-lg"
+                  className="btn btn-primary btn-lg shimmer-btn"
                 >
                   Book Your Free Trial Class
                 </button>

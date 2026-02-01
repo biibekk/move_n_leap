@@ -178,9 +178,12 @@ export default function Activities({ scrollToSection, sections }) {
                   <p className="instructor-class-info">{activity.instructor.info}</p>
                 </div>
 
-                <a href="#book-trial" className="activity-btn">
+                <button
+                  onClick={() => scrollToSection(ctaRef)}
+                  className="activity-btn shimmer-btn"
+                >
                   Book Free Trial Class
-                </a>
+                </button>
               </div>
             </div>
           ))}
@@ -191,8 +194,11 @@ export default function Activities({ scrollToSection, sections }) {
           <div className="cta-content">
             <h3>Not Sure Which Activity to Choose?</h3>
             <p>Book a free consultation with our program coordinator to find the perfect fit for your child.</p>
-            <a href="#contact" className="btn btn-primary btn-lg"
-              onClick={() => scrollToSection(ctaRef)}
+            <a href="#contact" className="btn btn-primary btn-lg shimmer-btn"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(ctaRef);
+              }}
             >
               Schedule Free Consultation
             </a>

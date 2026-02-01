@@ -105,7 +105,7 @@ export default function CTA() {
               {/* CTA Buttons */}
               <div className="cta-buttons">
                 <button
-                  className="btn btn-primary btn-lg"
+                  className="btn btn-primary btn-lg shimmer-btn"
                   onClick={handleScrollToForm}
                 >
                   Book Your Free Trial Now
@@ -197,7 +197,7 @@ export default function CTA() {
                 </select>
               </div>
 
-              <button type="submit" className="form-submit-btn">
+              <button type="submit" className="form-submit-btn shimmer-btn">
                 Request Free Trial Class
                 {/* <ArrowRight className="btn-arrow" /> */}
               </button>

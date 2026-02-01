@@ -1,7 +1,7 @@
 import { Star, Quote } from 'lucide-react';
 import './Testimonials.css';
 
-export default function Testimonials() {
+export default function Testimonials({ scrollToSection, ctaRef }) {
   const testimonials = [
     {
       name: "Priya Sharma",
@@ -24,7 +24,7 @@ export default function Testimonials() {
       role: "Mother of 7-year-old twins",
       image: "https://randomuser.me/api/portraits/women/3.jpg",
       rating: 5,
-      text: "Both my twins attend different programs here – one does Dance and the other Drama. The facility is clean, safe, and the staff treats every child with such warmth. I highly recommend Move N Leap to every parent in Gurugram!",
+      text: "Both my twins attend different programs here – one does Dance and the other Drama. The facility is clean, safe, and the staff treats every child with such warmth. I highly recommend Move N Leap to every parent in Noida!",
       activity: "Dance & Drama"
     },
     {
@@ -146,6 +146,17 @@ export default function Testimonials() {
             <span className="trust-number">95%</span>
             <span className="trust-label">Recommend Us</span>
           </div>
+        </div>
+
+        {/* Micro-CTA */}
+        <div className="section-footer-cta">
+          <h3>Join 200+ Happy Families.</h3>
+          <button
+            onClick={() => scrollToSection(ctaRef)}
+            className="btn btn-primary shimmer-btn"
+          >
+            Claim Your Spot
+          </button>
         </div>
       </div>
     </section>
