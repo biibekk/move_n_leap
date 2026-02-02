@@ -1,12 +1,15 @@
 const express = require("express");
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 const Lead = require("../models/lead.js");
 
 const router = express.Router();
 
+// Initialize Resend with your API key
 router.post("/", async (req, res) => {
   const { parentName, phone, childAge, activity } = req.body;
 
+  // Initialize Resend inside the handler to ensure env vars are ready
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     // SAVE TO DATABASE FIRST
     const savedLead = await Lead.create({
@@ -18,38 +21,26 @@ router.post("/", async (req, res) => {
 
     console.log("Saved to DB:", savedLead._id);
 
-    // SEND THE SUCCESS RESPONSE IMMEDIATELY after DB save
+    // SEND THE SUCCESS RESPONSE IMMEDIATELY
     res.status(201).json({
       success: true,
       message: "Enquiry received! We will call you soon.",
     });
 
-    // In backend/src/routes/parentEnquiry.js
-
-    // ATTEMPT TO SEND EMAIL IN THE BACKGROUND VIA RESEND
-    const transporter = nodemailer.createTransport({
-      host: "smtp.resend.com",
-      port: 587,
-      secure: false, // Use STARTTLS (Port 587)
-      auth: {
-        user: "resend", // This is literal text "resend"
-        pass: process.env.RESEND_API_KEY,
-      },
-    });
-
-    transporter.sendMail({
-      from: "MovenLeap <onboarding@resend.dev>", // For free accounts, use this 'from' address
-      to: process.env.CLIENT_EMAIL,
+    // SEND EMAIL IN THE BACKGROUND VIA RESEND SDK (Uses HTTP, not SMTP)
+    resend.emails.send({
+      from: "MovenLeap <onboarding@resend.dev>", // For free accounts, use this 'from'
+      to: process.env.CLIENT_EMAIL || "divas.shrestha20@gmail.com",
       subject: "New Parent Enquiry",
       html: `
         <h3>New Enquiry Received</h3>
         <p><b>Parent Name:</b> ${parentName}</p>
-        <p><b>Phone:</b> ${phone}</p> 
+        <p><b>Phone:</b> ${phone}</p>
         <p><b>Child Age:</b> ${childAge}</p>
         <p><b>Activity:</b> ${activity}</p>
       `,
-    }).then(() => console.log("Email sent successfully via Resend"))
-      .catch(err => console.error("Resend Email Error:", err));
+    }).then(() => console.log("Email sent successfully via Resend SDK"))
+      .catch(err => console.error("Resend SDK Error:", err));
 
   } catch (error) {
     console.error("Enquiry Database Error:", error);

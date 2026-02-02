@@ -284,6 +284,7 @@
   background: white;
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-lg);
+  margin-top: 2rem;
 }
 
 .stat-item {
