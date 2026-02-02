@@ -55,6 +55,7 @@ export default function Testimonials({ scrollToSection, ctaRef }) {
 
   return (
     <section className="testimonials" id="reviews">
+      <div className="testimonials-background"></div>
       <div className="container">
         <div className="testimonials-header">
           <span className="section-label">Parent Reviews</span>

@@ -74,6 +74,7 @@ export default function CTA() {
 
   return (
     <section className="cta" id="book-trial">
+      <div className="cta-background"></div>
       <div className="container">
         {/* Main CTA Content */}
         <div className="cta-content">

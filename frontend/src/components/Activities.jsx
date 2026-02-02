@@ -110,6 +110,7 @@ export default function Activities({ scrollToSection, sections }) {
 
   return (
     <section className="activities" id="activities">
+      <div className="activities-background"></div>
       <div className="container">
         <div className="activities-header">
           <span className="section-label">Our Programs</span>
