@@ -8,23 +8,15 @@
   /* Space for fixed navbar */
 }
 
-/* Background Video */
-.hero-video-container {
+/* Background Image */
+.hero-background {
   position: absolute;
   inset: 0;
+  background-image: url('https://images.pexels.com/photos/3662667/pexels-photo-3662667.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   z-index: 0;
-}
-
-.hero-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-fallback-bg {
-  position: absolute;
-  inset: 0;
-  background: url('https://teamspeedco.com/userfiles/2217/images/youth-sp-banner.png?t=20250922040913') center/cover;
 }
 
 /* Gradient Overlay */
@@ -32,9 +24,9 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg,
-      var(--bg-gradient-start),
-      var(--bg-gradient-middle),
-      var(--bg-gradient-end));
+      rgba(30, 27, 75, 0.85),
+      rgba(79, 70, 229, 0.7),
+      rgba(79, 70, 229, 0.4));
   z-index: 1;
 }
 
@@ -345,6 +337,10 @@
 @media (max-width: 768px) {
   .hero {
     padding: 4rem 1rem;
+  }
+
+  .hero-background {
+    background-attachment: fixed;
   }
 
   .hero-heading-wrapper {

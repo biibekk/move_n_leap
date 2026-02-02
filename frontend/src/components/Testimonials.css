@@ -1,6 +1,26 @@
 .testimonials {
   padding: 6rem 1.5rem;
-  background: white;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.9), rgba(30, 27, 75, 0.95)),
+    url('https://images.pexels.com/photos/4019754/pexels-photo-4019754.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.testimonials .container {
+  position: relative;
+  z-index: 2;
+}
+
+.testimonials .section-title,
+.testimonials .section-description {
+  color: white;
+}
+
+.testimonials .section-label {
+  background: var(--accent-color);
+  color: var(--primary-dark);
 }
 
 .testimonials-header {
@@ -224,6 +244,10 @@
   font-weight: 600;
 }
 
+.testimonials-micro-cta-title {
+  color: white;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .rating-summary {
@@ -239,6 +263,7 @@
 @media (max-width: 768px) {
   .testimonials {
     padding: 4rem 1rem;
+    background-attachment: fixed;
   }
 
   .testimonials-grid {

@@ -11,13 +11,8 @@ export default function Hero({ scrollToSection, aboutRef, ctaRef }) {
 
   return (
     <header className="hero">
-      {/* Background Video */}
-      <div className="hero-video-container">
-        <video autoPlay loop muted playsInline className="hero-video">
-          <source src="https://cdn.coverr.co/videos/coverr-children-playing-in-a-classroom-5336/1080p.mp4" type="video/mp4" />
-        </video>
-        <div className="hero-fallback-bg"></div>
-      </div>
+      {/* Fixed Background Image */}
+      <div className="hero-background"></div>
 
       {/* Gradient Overlay */}
       <div className="hero-overlay"></div>
@@ -116,7 +111,7 @@ export default function Hero({ scrollToSection, aboutRef, ctaRef }) {
                   src="https://www.teachhub.com/wp-content/uploads/2020/05/Top-10-Indoor-Games-scaled.jpg"
                   alt="Children participating in fun educational activities at Move N Leap Academy Noida"
                   className="hero-img"
-                  fetchpriority="high"
+                  fetchPriority="high"
                 />
                 {/* Floating Stats */}
                 <div className="floating-stat stat-1">

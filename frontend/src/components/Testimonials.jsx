@@ -150,7 +150,7 @@ export default function Testimonials({ scrollToSection, ctaRef }) {
 
         {/* Micro-CTA */}
         <div className="section-footer-cta">
-          <h3>Join 200+ Happy Families.</h3>
+          <h3 className="testimonials-micro-cta-title">Join 200+ Happy Families.</h3>
           <button
             onClick={() => scrollToSection(ctaRef)}
             className="btn btn-primary shimmer-btn"

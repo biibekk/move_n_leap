@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.css';
+import { PhoneIcon, Menu, X } from 'lucide-react';
 
 export default function Navbar({ scrolled, isMenuOpen, setIsMenuOpen, scrollToSection, sections }) {
   const { heroRef, activitiesRef, featuresRef, aboutRef, testimonialsRef, ctaRef } = sections;
@@ -29,7 +30,10 @@ export default function Navbar({ scrolled, isMenuOpen, setIsMenuOpen, scrollToSe
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            ☰
+            <div className={`icon-wrapper ${isMenuOpen ? 'open' : ''}`}>
+              <Menu className="menu-icon" size={28} />
+              <X className="close-icon" size={28} />
+            </div>
           </button>
 
           {/* Navigation Items */}
@@ -72,7 +76,7 @@ export default function Navbar({ scrolled, isMenuOpen, setIsMenuOpen, scrollToSe
             {/* Phone & CTA */}
             <div className="nav-actions">
               <a href="tel:+919319693858" className="nav-phone">
-                <span role="img" aria-label="phone">📞</span> +91 93196 93858
+                <span role="img" aria-label="phone"><PhoneIcon /></span> +91 93196 93858
               </a>
               <button
                 className="btn btn-primary btn-sm shimmer-btn"

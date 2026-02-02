@@ -1,6 +1,26 @@
 .activities {
   padding: 6rem 1.5rem;
-  background: white;
+  background: linear-gradient(135deg, rgba(30, 27, 75, 0.9), rgba(79, 70, 229, 0.8)),
+    url('https://images.unsplash.com/photo-1555597673-b21d5c935865?w=1600&q=80');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.activities .container {
+  position: relative;
+  z-index: 2;
+}
+
+.activities .section-title,
+.activities .section-description {
+  color: white;
+}
+
+.activities .section-label {
+  background: var(--accent-color);
+  color: var(--primary-dark);
 }
 
 .activities-header {
@@ -273,6 +293,7 @@
 @media (max-width: 768px) {
   .activities {
     padding: 4rem 1rem;
+    background-attachment: fixed;
   }
 
   .activities-grid {

@@ -1,6 +1,10 @@
 .cta {
   padding: 6rem 1.5rem;
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  background: linear-gradient(135deg, rgba(30, 27, 75, 0.95), rgba(79, 70, 229, 0.9)),
+    url('https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   position: relative;
   overflow: hidden;
 }
@@ -395,6 +399,7 @@
 @media (max-width: 768px) {
   .cta {
     padding: 4rem 1rem;
+    background-attachment: fixed;
   }
 
   .cta-title {
@@ -469,11 +474,11 @@
   }
 
   .cta-buttons {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .cta-trust {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .cta-form-section {
