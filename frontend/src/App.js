@@ -37,12 +37,22 @@ export default function App() {
   const scrollToSection = (ref) => {
     if (!ref?.current) return;
 
-    // Get the current navbar height from the DOM instead of using state
+    // Get the current navbar height from the DOM
     const navbar = document.querySelector('.navbar');
     const navbarHeight = navbar ? navbar.offsetHeight : 80;
 
+    let targetElement = ref.current;
+
+    // On mobile/tablet (less than 1024px), if scrolling to CTA, target the form directly
+    if (ref === ctaRef && window.innerWidth < 1024) {
+      const formSection = document.querySelector('.cta-form-section');
+      if (formSection) {
+        targetElement = formSection;
+      }
+    }
+
     const y =
-      ref.current.getBoundingClientRect().top +
+      targetElement.getBoundingClientRect().top +
       window.pageYOffset -
       navbarHeight;
 
@@ -80,7 +90,7 @@ export default function App() {
       <section ref={faqRef}><FAQ /></section>
       <section ref={ctaRef}><CTA /></section>
 
-      <Footer />
+      <Footer scrollToSection={scrollToSection} ctaRef={ctaRef} />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import { Check, Star, Trophy, Award, MapPin, Phone, Mail, Clock, Shield, Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
 import './Footer.css';
 
-export default function Footer() {
+export default function Footer({ scrollToSection, ctaRef }) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -47,7 +47,17 @@ export default function Footer() {
               <li><a href="#activities">Our Programs</a></li>
               <li><a href="#reviews">Testimonials</a></li>
               <li><a href="#faq">FAQ</a></li>
-              <li><a href="#book-trial">Book Trial Class</a></li>
+              <li>
+                <a
+                  href="#book-trial"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(ctaRef);
+                  }}
+                >
+                  Book Trial Class
+                </a>
+              </li>
               <li><a href="#contact">Contact Us</a></li>
             </ul>
           </div>
