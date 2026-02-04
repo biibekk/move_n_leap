@@ -116,19 +116,19 @@ export default function About({ scrollToSection, ctaRef }) {
             <div className="founder-card">
               <div className="founder-image">
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80"
-                  alt="Sarah Mitchell - Founder"
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80"
+                  alt="Ms. Yogita Pandey - Founder"
                   loading="lazy"
                 />
               </div>
               <div className="founder-info">
                 <div className="founders-header">
-                  <h4>Sarah Mitchell</h4>
-                  <span className="founder-role">Founder & CEO</span>
+                  <h4>Ms. Yogita Pandey</h4>
+                  <span className="founder-role">Founder</span>
                 </div>
                 <p className="founder-bio">
                   With over 20 years of experience in child development and education,
-                  Sarah founded Move N Leap to create a space where every child can thrive.
+                  Ms. Yogita Pandey founded Move N Leap to create a space where every child can thrive.
                   She holds a Master's in Early Childhood Education and is a certified
                   child psychologist.
                 </p>
@@ -139,17 +139,17 @@ export default function About({ scrollToSection, ctaRef }) {
               <div className="founder-image">
                 <img
                   src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80"
-                  alt="David Chen - Co-Founder"
+                  alt="Mr. Saurav Tripathi - Co-Founder"
                   loading="lazy"
                 />
               </div>
               <div className="founder-info">
                 <div className="founders-header">
-                  <h4>David Chen</h4>
-                  <span className="founder-role">Co-Founder & Program Director</span>
+                  <h4>Mr. Saurav Tripathi</h4>
+                  <span className="founder-role">Co-Founder</span>
                 </div>
                 <p className="founder-bio">
-                  A former professional athlete and sports educator, David brings his
+                  A former professional athlete and sports educator, Mr. Saurav Tripathi brings his
                   passion for physical fitness and holistic development to Move N Leap.
                   He specializes in creating engaging, age-appropriate curricula that
                   build confidence and character.
