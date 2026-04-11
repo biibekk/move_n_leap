@@ -178,7 +178,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 0.5rem;
   background: linear-gradient(135deg, var(--activity-color)15, var(--activity-color)05);
   border-left: 3px solid var(--activity-color);
   border-radius: var(--radius-md);
@@ -357,6 +357,10 @@
     opacity: 1;
     margin-bottom: 1.5rem;
     padding: 1rem;
+  }
+
+  .activity-schedule {
+    padding: 0.5rem;
   }
 
   .activity-card.expanded .instructor-info {

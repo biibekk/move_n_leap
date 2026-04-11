@@ -116,7 +116,7 @@ export default function About({ scrollToSection, ctaRef }) {
             <div className="founder-card">
               <div className="founder-image">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80"
+                  src="/imgs/founder.jpeg"
                   alt="Ms. Yogita Pandey - Founder"
                   loading="lazy"
                 />
@@ -127,10 +127,10 @@ export default function About({ scrollToSection, ctaRef }) {
                   <span className="founder-role">Founder</span>
                 </div>
                 <p className="founder-bio">
-                  With over 20 years of experience in child development and education,
-                  Ms. Yogita Pandey founded Move N Leap to create a space where every child can thrive.
-                  She holds a Master's in Early Childhood Education and is a certified
-                  child psychologist.
+                  Driven by a lifelong belief that every child carries a unique spark, 
+                  Ms. Yogita founded Move N Leap to be more than just an academy—it's a 
+                  nurturing home for growth. With 15 years of experience, her heart is 
+                  set on building the confidence and resilience that children carry for a lifetime.
                 </p>
               </div>
             </div>
@@ -138,7 +138,7 @@ export default function About({ scrollToSection, ctaRef }) {
             <div className="founder-card">
               <div className="founder-image">
                 <img
-                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80"
+                  src="/imgs/cofounder.jpeg"
                   alt="Mr. Saurav Tripathi - Co-Founder"
                   loading="lazy"
                 />
@@ -149,10 +149,10 @@ export default function About({ scrollToSection, ctaRef }) {
                   <span className="founder-role">Co-Founder</span>
                 </div>
                 <p className="founder-bio">
-                  A former professional athlete and sports educator, Mr. Saurav Tripathi brings his
-                  passion for physical fitness and holistic development to Move N Leap.
-                  He specializes in creating engaging, age-appropriate curricula that
-                  build confidence and character.
+                  For Saurav, sports were the foundation of his character, and for the last 
+                  15 years, he’s shared that gift with children.
+                  He believes that when children move with joy, they discover a 
+                  strength they never knew they had, building discipline that lasts forever.
                 </p>
               </div>
             </div>
@@ -181,7 +181,7 @@ export default function About({ scrollToSection, ctaRef }) {
 
         {/* Micro-CTA */}
         <div className="section-footer-cta">
-          <h3>Join our legacy of excellence in Noida.</h3>
+          <h3>Join our legacy of excellence.</h3>
           <button
             onClick={() => scrollToSection(ctaRef)}
             className="btn btn-primary shimmer-btn"

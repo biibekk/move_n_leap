@@ -53,11 +53,10 @@ export default function Features({ scrollToSection, ctaRef }) {
         <div className="features-header">
           <span className="section-label">Why Choose Move N Leap</span>
           <h2 className="section-title">
-            Comprehensive Development for Your Child
+            Active Learning Beyond the Classroom
           </h2>
           <p className="section-description">
-            Our programs are designed by child development experts to nurture every aspect
-            of your child's growth – mind, body, and character.
+            Designed by experts, our programs foster holistic child development—shaping the mind, strengthening the body, and building character.
           </p>
         </div>
 

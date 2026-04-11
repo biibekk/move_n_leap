@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SquareActivity, ShieldCheck, Activity, Swords, Music, Drama, Crown, Dumbbell, Palette } from 'lucide-react';
+import { SquareActivity, ShieldCheck, Activity, Swords, Music, Drama, Crown, Dumbbell, Palette, Trophy, PenTool, BookOpen } from 'lucide-react';
 import './Activities.css';
 
 export default function Activities({ scrollToSection, sections }) {
@@ -13,14 +13,14 @@ export default function Activities({ scrollToSection, sections }) {
     {
       icon: <ShieldCheck />,
       title: "Self Defense",
-      ageGroup: "Ages 5-16",
-      description: "Build discipline, respect, and self-defense skills with certified black belt instructors.",
+      ageGroup: "Age 4.5 Years+",
+      description: "Build discipline, respect, and self-defense skills.",
       benefits: ["Physical fitness", "Mental discipline", "Self-confidence", "Belt progression"],
       image: "https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80",
       schedule: "Tue, Thu, Sat - 6:00 PM to 7:00 PM",
       color: "#ef4444",
       instructor: {
-        name: "Bibek Shrestha",
+        name: "Mr. Bibek Shrestha",
         credentials: "1st Dan Black Belt",
         experience: "3+ years teaching martial arts to children",
         info: "Classes are structured, safety-first, and focused on building confidence, discipline, and respectful behavior — not aggression."
@@ -29,81 +29,145 @@ export default function Activities({ scrollToSection, sections }) {
     {
       icon: <Music />,
       title: "Dance",
-      ageGroup: "Ages 4-15",
-      description: "Express creativity through various dance forms including Hip-Hop, Contemporary, and Bollywood.",
+      ageGroup: "Age 4 Years+",
+      description: "Express creativity through various dance forms including Freestyle, Hip-Hop, Contemporary, and Bollywood.",
       benefits: ["Creative expression", "Coordination", "Performance skills", "Team spirit"],
       image: "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=600&q=80",
-      schedule: "Tue, Thu, Sat - 3:30 PM to 5:00 PM",
+      schedule: "Tue, Thu, Sat",
       color: "#8b5cf6",
       instructor: {
-        name: "Priya Sharma",
-        credentials: "Professional Choreographer, Dance Academy Graduate",
-        experience: "10+ years in dance education and performance",
-        info: ""
+        name: "Ms. Chetna Anand",
+        credentials: "Professional Choreographer",
+        experience: "7+ years in dance education",
+        info: "Specializes in developing rhythm and expressive movement through a structured yet creative approach."
       }
     },
     {
       icon: <Drama />,
       title: "Drama & Theater",
-      ageGroup: "Ages 6-14",
+      ageGroup: "Age 4 Years+",
       description: "Develop public speaking, confidence, and emotional intelligence through theatrical arts.",
       benefits: ["Public speaking", "Confidence", "Creativity", "Emotional expression"],
       image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
-      schedule: "Wed, Fri - 5:30 PM to 7:00 PM",
+      schedule: "Tue, Thu | Sat, Sun",
       color: "#f59e0b",
       instructor: {
-        name: "Arjun Mehta",
-        credentials: "Theater Arts Graduate, NSD Certified",
-        experience: "12+ years in theater and drama coaching",
-        info: ""
+        name: "Ms. Garima Arya",
+        credentials: "Owner, Dramabaaz Pvt Ltd",
+        experience: "Professional Theater Artist & Coach",
+        info: "Focuses on building stage presence and emotional intelligence through immersive theatrical techniques."
       }
     },
     {
       icon: <Crown />,
       title: "Chess",
-      ageGroup: "Ages 7-16",
+      ageGroup: "Age 4.5 Years+",
       description: "Master strategic thinking and problem-solving with FIDE-certified chess coaches.",
       benefits: ["Strategic thinking", "Problem solving", "Focus", "Tournament prep"],
       image: "https://images.unsplash.com/photo-1586165368502-1bad197a6461?w=600&q=80",
-      schedule: "Tue, Thu - 4:00 PM to 5:30 PM",
+      schedule: "Mon, Wed",
       color: "#06b6d4",
       instructor: {
-        name: "Grandmaster Vikram Singh",
-        credentials: "FIDE Master, International Chess Federation",
-        experience: "20+ years coaching young chess players",
-        info: ""
+        name: "Mr. Alok",
+        credentials: "Certified Chief Arbiter (AICF)",
+        experience: "9+ years of coaching experience",
+        info: "Brings high-level strategic expertise to help children master focus and logical reasoning."
+      }
+    },
+    {
+      icon: <Dumbbell />,
+      title: "Gymnastics",
+      ageGroup: "2-5 Years | 5 Years+",
+      description: "Progressive gymnastics training tailored for different age groups—from foundational movement for toddlers to advancing skills for children 5 years+.",
+      benefits: ["Flexibility & Strength", "Core Stability", "Balance & Agility", "Progressive Learning"],
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
+      schedule: "Mon, Wed, Fri",
+      color: "#10b981",
+      instructor: {
+        name: "Ms. Jyoti & Ms. Rani",
+        credentials: "Professional Gymnastics Coaches",
+        experience: "10+ and 7+ years of experience",
+        info: "Our programs are specifically designed to grow with your child, moving from play-based development to structured athletic training."
       }
     },
     {
       icon: <Activity />,
-      title: "Fitness & Yoga",
-      ageGroup: "Ages 8-16",
-      description: "Comprehensive fitness program combining yoga, strength training, and flexibility.",
-      benefits: ["Physical health", "Flexibility", "Mindfulness", "Stress relief"],
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80",
-      schedule: "Mon, Wed, Fri - 6:00 PM to 7:00 PM",
-      color: "#10b981",
+      title: "Skating",
+      ageGroup: "Age 3 Years+",
+      description: "Learn the fundamentals of roller skating and balance control in a safe environment.",
+      benefits: ["Balance", "Leg strength", "Endurance", "Confidence"],
+      image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600&q=80",
+      schedule: "Tue, Thu, Sat",
+      color: "#3b82f6",
       instructor: {
-        name: "Anjali Desai",
-        credentials: "Certified Yoga Instructor, Fitness Trainer",
-        experience: "8+ years in youth fitness and wellness",
+        name: "Mr. Mohit",
+        credentials: "Expert Skating Instructor",
+        experience: "8+ years in professional coaching",
+        info: "Emphasizes safety and technical balance, helping beginners transition smoothly into confident skaters."
+      }
+    },
+    {
+      icon: <Trophy />,
+      title: "Basketball",
+      ageGroup: "Age 4 Years+",
+      description: "Build team spirit, agility, and fundamental basketball skills from dribbling to shooting.",
+      benefits: ["Teamwork", "Agility", "Hand-eye coordination", "Sportmanship"],
+      image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&q=80",
+      schedule: "Tue, Thu, Sat",
+      color: "#f59e0b",
+      instructor: {
+        name: "Rahul ",
+        credentials: "Professional Basketball Coach",
+        experience: "8+ years coaching school teams",
         info: ""
       }
     },
     {
-      icon: <Palette />,
-      title: "Art & Craft",
-      ageGroup: "Ages 5-13",
-      description: "Unleash creativity through painting, sculpting, and various artistic techniques.",
-      benefits: ["Creativity", "Fine motor skills", "Self-expression", "Art appreciation"],
-      image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80",
-      schedule: "Sat, Sun - 10:00 AM to 11:30 AM",
+      icon: <Swords />,
+      title: "Fencing",
+      ageGroup: "Ages 5 Years+",
+      description: "Experience the art of fencing, developing sharp reflexes and strategic thinking.",
+      benefits: ["Reflexes", "Strategy", "Focus", "Discipline"],
+      image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80",
+      schedule: "Wed, Fri - 6:00 PM to 7:30 PM",
+      color: "#6366f1",
+      instructor: {
+        name: "Sandeep Singh",
+        credentials: "Fencing Instructor, National Medalist",
+        experience: "12+ years in competitive fencing",
+        info: ""
+      }
+    },
+    {
+      icon: <PenTool />,
+      title: "Creative Writing",
+      ageGroup: "Age 3 Years+",
+      description: "Nurture imagination and improve narrative skills through storytelling and writing workshops.",
+      benefits: ["Vocabulary", "Imagination", "Self-expression", "Grammar"],
+      image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80",
+      schedule: "Sat, Sun",
       color: "#ec4899",
       instructor: {
-        name: "Kavita Reddy",
-        credentials: "Fine Arts Graduate, Art Education Specialist",
-        experience: "11+ years teaching art to children",
+        name: "Meera Nair",
+        credentials: "Published Author & Writing Coach",
+        experience: "15+ years in literature education",
         info: ""
+      }
+    },
+    {
+      icon: <BookOpen />,
+      title: "Phonics",
+      ageGroup: "Age 3 Years+",
+      description: "Build a strong foundation for reading and pronunciation with our structured phonics program.",
+      benefits: ["Reading speed", "Spelling", "Pronunciation", "Confidence"],
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80",
+      schedule: "Mon, Wed, Fri",
+      color: "#8b5cf6",
+      instructor: {
+        name: "Ms. Sumati Anand & Ms. Yogita Pandey",
+        credentials: "Foundational Literacy Specialists",
+        experience: "20+ and 5+ years of experience",
+        info: "A dedicated team focused on building strong reading foundations and linguistic confidence through interactive methods."
       }
     }
   ];
@@ -113,13 +177,12 @@ export default function Activities({ scrollToSection, sections }) {
       <div className="activities-background"></div>
       <div className="container">
         <div className="activities-header">
-          <span className="section-label">Our Programs</span>
+          <span className="section-label">Our Expertise</span>
           <h2 className="section-title">
-            Kids Extracurricular Activities in Noida
+            Unlock Your Child’s Full Potential
           </h2>
           <p className="section-description">
-            Expertly designed programs that combine fun with structured learning.
-            Each activity is led by certified professionals dedicated to your child's growth.
+            Activities that blend fun with meaningful learning—helping your child build confidence, discover their strengths, guided by experienced professionals.
           </p>
         </div>
 

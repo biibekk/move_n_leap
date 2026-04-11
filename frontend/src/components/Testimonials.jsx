@@ -1,55 +1,58 @@
-import { Star, Quote } from 'lucide-react';
+import { Star, Quote, ChevronDown, ChevronUp } from 'lucide-react';
+import { useState } from 'react';
 import './Testimonials.css';
 
 export default function Testimonials({ scrollToSection, ctaRef }) {
+  const [expandedIndex, setExpandedIndex] = useState(0);
+
   const testimonials = [
     {
-      name: "Priya Sharma",
-      role: "Mother of 8-year-old",
-      image: "https://randomuser.me/api/portraits/women/1.jpg",
+      name: "Sneha Kapoor",
+      role: "Mother of 6-year-old Advika",
+      image: "https://randomuser.me/api/portraits/women/10.jpg",
       rating: 5,
-      text: "My daughter joined the Self Defense program 6 months ago and the transformation has been incredible. Her confidence has soared, and she's more disciplined at home. The instructors are patient, professional, and truly care about each child's development.",
-      activity: "Self Defense"
+      text: "Initially, I was worried about my daughter being too shy, but the Gymnastics coaches here are amazing! They focus on balance and confidence as much as the moves. Advika now looks forward to every session and has become so much more active at home.",
+      activity: "Gymnastics"
     },
     {
-      name: "Rajesh Kumar",
-      role: "Father of 10-year-old",
-      image: "https://randomuser.me/api/portraits/men/2.jpg",
+      name: "Dr. Arpit Gupta",
+      role: "Father of 8-year-old Ishan",
+      image: "https://randomuser.me/api/portraits/men/11.jpg",
       rating: 5,
-      text: "Move N Leap isn't just an after-school program – it's a second home for my son. He's made wonderful friends, learned Chess from certified coaches, and most importantly, he's happy. As parents, that peace of mind is priceless.",
-      activity: "Chess"
+      text: "Finding a safe place for skating in Noida was tough until we found Move N Leap. The rink is well-maintained and the safety protocols are strict. My son went from stumbling to gliding in just 2 months. The trainers' patience is commendable.",
+      activity: "Skating"
     },
     {
-      name: "Anjali Verma",
-      role: "Mother of 7-year-old twins",
-      image: "https://randomuser.me/api/portraits/women/3.jpg",
+      name: "Monica Iyer",
+      role: "Mother of 10-year-old Kabir",
+      image: "https://randomuser.me/api/portraits/women/12.jpg",
       rating: 5,
-      text: "Both my twins attend different programs here – one does Dance and the other Drama. The facility is clean, safe, and the staff treats every child with such warmth. I highly recommend Move N Leap to every parent in Noida!",
-      activity: "Dance & Drama"
+      text: "The basketball coaching here is top-notch. It’s not just about the game; it's about teamwork and discipline. My son's stamina has improved remarkably, and he's learned the value of persistence through every drill.",
+      activity: "Basketball"
     },
     {
-      name: "Vikram Patel",
-      role: "Father of 12-year-old",
-      image: "https://randomuser.me/api/portraits/men/4.jpg",
+      name: "Rahul Mehra",
+      role: "Father of 9-year-old Zara",
+      image: "https://randomuser.me/api/portraits/men/13.jpg",
       rating: 5,
-      text: "The instructors here don't just teach skills – they build character. My son has become more focused, respectful, and determined. The progress reports and regular parent communication keep us involved in his journey.",
-      activity: "Martial Arts"
+      text: "Fencing is such a unique sport, and we were thrilled to find it here. The equipment is professional and safety is clearly a priority. Zara loves the focus it requires, and we've noticed her concentration improving even in her studies.",
+      activity: "Fencing"
     },
     {
-      name: "Meera Reddy",
-      role: "Mother of 9-year-old",
-      image: "https://randomuser.me/api/portraits/women/5.jpg",
+      name: "Shalini Jain",
+      role: "Mother of 11-year-old Myra",
+      image: "https://randomuser.me/api/portraits/women/14.jpg",
       rating: 5,
-      text: "I was initially worried about safety, but Move N Leap exceeded all expectations. Background-checked staff, proper insurance, and constant supervision. Plus, my daughter's improvement in public speaking after Drama classes is remarkable!",
-      activity: "Drama"
+      text: "My daughter always had stories in her head but didn't know how to express them. The Creative Writing classes helped her find her voice. She's now writing short stories with so much more structure and creativity. Truly an enriching experience!",
+      activity: "Creative Writing"
     },
     {
-      name: "Amit Singh",
-      role: "Father of 6-year-old",
-      image: "https://randomuser.me/api/portraits/men/6.jpg",
+      name: "Kunal Sethi",
+      role: "Father of 5-year-old Arjun",
+      image: "https://randomuser.me/api/portraits/men/15.jpg",
       rating: 5,
-      text: "The free trial class was what convinced us. We saw firsthand how engaged the kids were and how passionate the instructors are. Three months in, and our son wakes up excited for his Dance classes. Worth every rupee!",
-      activity: "Dance"
+      text: "We struggled with Arjun's reading skills until we joined the Phonics program. The multi-sensory approach really works for young kids. He started blending words faster than we expected, and now he loves picking up storybooks on his own.",
+      activity: "Phonics"
     }
   ];
 
@@ -71,66 +74,105 @@ export default function Testimonials({ scrollToSection, ctaRef }) {
         {/* Rating Summary */}
         <div className="rating-summary">
           <div className="rating-box">
-            <strong>4.8</strong>
+            <strong>4.7</strong>
             <div className="stars">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="star-icon filled" />
+                <Star key={i} className={`star-icon ${i < 4 ? 'filled' : 'half-filled'}`} />
               ))}
             </div>
-            <span>Based on 250+ reviews</span>
+            <span>Based on 284 verified reviews</span>
           </div>
           <div className="rating-details">
             <div className="rating-row">
               <span>5 stars</span>
               <div className="rating-bar">
-                <div className="rating-fill" style={{ width: '95%' }}></div>
+                <div className="rating-fill" style={{ width: '80%' }}></div>
               </div>
-              <span>95%</span>
+              <span>80%</span>
             </div>
             <div className="rating-row">
               <span>4 stars</span>
               <div className="rating-bar">
-                <div className="rating-fill" style={{ width: '4%' }}></div>
+                <div className="rating-fill" style={{ width: '12%' }}></div>
               </div>
-              <span>4%</span>
+              <span>12%</span>
             </div>
             <div className="rating-row">
               <span>3 stars</span>
               <div className="rating-bar">
-                <div className="rating-fill" style={{ width: '1%' }}></div>
+                <div className="rating-fill" style={{ width: '6%' }}></div>
               </div>
-              <span>1%</span>
+              <span>6%</span>
+            </div>
+            <div className="rating-row">
+              <span>2 stars</span>
+              <div className="rating-bar">
+                <div className="rating-fill" style={{ width: '2%' }}></div>
+              </div>
+              <span>2%</span>
             </div>
           </div>
         </div>
 
         {/* Testimonials Grid */}
         <div className="testimonials-grid">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="testimonial-card">
-              <Quote className="quote-icon" />
-
-              <div className="testimonial-rating">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="star-icon filled" />
-                ))}
-              </div>
-
-              <p className="testimonial-text">{testimonial.text}</p>
-
-              <div className="testimonial-activity">
-                <span>Program: {testimonial.activity}</span>
-              </div>
-
-              <div className="testimonial-author">
-                <img src={testimonial.image} alt={testimonial.name} />
-                <div>
-                  <strong>{testimonial.name}</strong>
-                  <span>{testimonial.role}</span>
+          {testimonials.map((testimonial, index) => {
+            const isExpanded = expandedIndex === index;
+            
+            return (
+              <div 
+                key={index} 
+                className={`testimonial-card ${isExpanded ? 'active' : 'collapsed'} ${index === 0 ? 'featured' : ''}`}
+                onClick={() => setExpandedIndex(isExpanded ? (index === 0 ? 0 : -1) : index)}
+              >
+                <div className="testimonial-header-row justify-end">
+                  {index !== 0 && (
+                    <div className="expand-trigger">
+                      {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                    </div>
+                  )}
                 </div>
+
+                {isExpanded ? (
+                  <div className="expanded-content">
+                    <p className="testimonial-text full">
+                      {testimonial.text}
+                    </p>
+
+                    <div className="testimonial-activity">
+                      <span>Program: {testimonial.activity}</span>
+                    </div>
+
+                    <div className="testimonial-author">
+                      <img src={testimonial.image} alt={testimonial.name} />
+                      <div>
+                        <strong>{testimonial.name}</strong>
+                        <span>{testimonial.role}</span>
+                        <div className="testimonial-rating">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star key={i} className="star-icon filled" />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="testimonial-author collapsed-view">
+                    <img src={testimonial.image} alt={testimonial.name} />
+                    <div>
+                      <strong>{testimonial.name}</strong>
+                      <span>{testimonial.role}</span>
+                      <div className="testimonial-rating">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="star-icon filled" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Trust Indicators */}
@@ -140,7 +182,7 @@ export default function Testimonials({ scrollToSection, ctaRef }) {
             <span className="trust-label">Happy Families</span>
           </div>
           <div className="trust-item">
-            <span className="trust-number">4.8/5</span>
+            <span className="trust-number">4.7/5</span>
             <span className="trust-label">Average Rating</span>
           </div>
           <div className="trust-item">

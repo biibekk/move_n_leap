@@ -37,7 +37,7 @@ export default function Hero({ scrollToSection, aboutRef, ctaRef }) {
               </div>
 
               <p className="hero-description">
-                Expert-led programs in Self Defense, Dance, Drama, and Chess.
+                Expert-led programs in Self Defense, Dance, Drama, Chess, Gymnastics, Skating, and Basketball.
                 Build discipline, boost confidence, and help your child discover their potential
                 in a safe, structured environment.
               </p>
@@ -46,7 +46,7 @@ export default function Hero({ scrollToSection, aboutRef, ctaRef }) {
               <ul className="hero-benefits">
                 <li>
                   <CheckCircle className="check-icon" />
-                  <span><strong>Certified Instructors</strong> with 15+ years experience</span>
+                  <span><strong>Certified Instructors</strong> with 10+ years experience</span>
                 </li>
                 <li>
                   <CheckCircle className="check-icon" />
@@ -138,10 +138,8 @@ export default function Hero({ scrollToSection, aboutRef, ctaRef }) {
       <div className="trust-bar">
         <div className="container">
           <div className="trust-content">
-            <span>✓ No Credit Card Required</span>
-            <span>✓ Cancel Anytime</span>
-            <span>✓ Money-Back Guarantee</span>
-            <span>✓ Certified by National Sports Authority</span>
+            {/* <span>✓ No Credit Card Required</span> */}
+            <span>✓ Recognized by Motor Skill Learning Academy, Switzerland</span>
           </div>
         </div>
       </div>
