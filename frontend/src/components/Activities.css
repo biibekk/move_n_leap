@@ -76,7 +76,16 @@
   transition: transform 0.5s ease;
 }
 
-.activity-card:hover .activity-image img {
+.activity-video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0% 30%;
+  transition: transform 0.5s ease;
+}
+
+.activity-card:hover .activity-image img,
+.activity-card:hover .activity-video-bg {
   transform: scale(1.1);
 }
 
@@ -234,6 +243,7 @@
   color: var(--activity-color);
   font-weight: 600;
   margin-bottom: 0.25rem;
+  white-space: pre-line;
 }
 
 .instructor-experience {

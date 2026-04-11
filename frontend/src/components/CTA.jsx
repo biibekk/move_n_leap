@@ -13,12 +13,35 @@ export default function CTA() {
     activities: [],
   });
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [errors, setErrors] = useState({
+    phone: "",
+  });
+
+  const validatePhone = (phone) => {
+    return /^\d{10}$/.test(phone);
+  };
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    
+    if (name === "phone") {
+      // Allow ONLY digits and limit to 10 characters
+      const cleanedValue = value.replace(/\D/g, "").slice(0, 10);
+      setFormData({
+        ...formData,
+        [name]: cleanedValue,
+      });
+      
+      // Clear error as user types
+      if (errors.phone) {
+        setErrors({ ...errors, phone: "" });
+      }
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   const handleActivityChange = (activity) => {
@@ -32,12 +55,12 @@ export default function CTA() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Stops the browser from refreshing the page
-
-    // console.log("Parent Lead:", formData); 
-
-    // TEMP: alert (replace later with API / Formspree)
-    // alert("Thank you! We’ll call you shortly.");
+    
+    // Validate phone number
+    if (!validatePhone(formData.phone)) {
+      setErrors({ ...errors, phone: "Please enter a valid 10-digit phone number" });
+      return;
+    }
 
     try {
       const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:4000";
@@ -47,8 +70,6 @@ export default function CTA() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-        // Converts JavaScript object → JSON string
-        // Servers can’t read JS objects directly
       });
 
       const data = await res.json();
@@ -71,6 +92,7 @@ export default function CTA() {
       childAge: "",
       activities: [],
     });
+    setErrors({ phone: "" });
     setIsDropdownOpen(false);
   };
 
@@ -163,7 +185,6 @@ export default function CTA() {
                   placeholder="Enter your name"
                   required
                 />
-
               </div>
 
               <div className="form-group">
@@ -174,10 +195,13 @@ export default function CTA() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="+91 9876543210"
+                  placeholder="9876543210"
                   required
+                  className={errors.phone ? "error" : ""}
                 />
+                {errors.phone && <span className="error-message">{errors.phone}</span>}
               </div>
+
 
               <div className="form-group">
                 <label htmlFor="child-age">Child's Age *</label>

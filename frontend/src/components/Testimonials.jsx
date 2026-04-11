@@ -1,4 +1,4 @@
-import { Star, Quote, ChevronDown, ChevronUp } from 'lucide-react';
+import { Star, Quote, ChevronDown, ChevronUp, User } from 'lucide-react';
 import { useState } from 'react';
 import './Testimonials.css';
 
@@ -29,14 +29,6 @@ export default function Testimonials({ scrollToSection, ctaRef }) {
       rating: 5,
       text: "The basketball coaching here is top-notch. It’s not just about the game; it's about teamwork and discipline. My son's stamina has improved remarkably, and he's learned the value of persistence through every drill.",
       activity: "Basketball"
-    },
-    {
-      name: "Rahul Mehra",
-      role: "Father of 9-year-old Zara",
-      image: "https://randomuser.me/api/portraits/men/13.jpg",
-      rating: 5,
-      text: "Fencing is such a unique sport, and we were thrilled to find it here. The equipment is professional and safety is clearly a priority. Zara loves the focus it requires, and we've noticed her concentration improving even in her studies.",
-      activity: "Fencing"
     },
     {
       name: "Shalini Jain",
@@ -74,7 +66,7 @@ export default function Testimonials({ scrollToSection, ctaRef }) {
             What Parents Say About Us
           </h2>
           <p className="section-description">
-            Don't just take our word for it. Here's what real parents have to say
+            Don't just take our word for it. Here's what parents have to say
             about their children's experience at Move N Leap Academy.
           </p>
         </div>
@@ -150,7 +142,9 @@ export default function Testimonials({ scrollToSection, ctaRef }) {
                   </div>
 
                   <div className="testimonial-author">
-                    <img src={testimonial.image} alt={testimonial.name} />
+                    <div className="author-avatar">
+                      <User size={32} />
+                    </div>
                     <div className="author-details">
                       <strong>{testimonial.name}</strong>
                       <span>{testimonial.role}</span>

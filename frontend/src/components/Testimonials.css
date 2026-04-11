@@ -263,12 +263,17 @@
   border-top: 1px solid var(--gray-200);
 }
 
-.testimonial-author img {
+.author-avatar {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  flex-shrink: 0;
 }
 
 .testimonial-author strong {

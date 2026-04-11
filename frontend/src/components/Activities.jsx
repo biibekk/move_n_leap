@@ -14,9 +14,9 @@ export default function Activities({ scrollToSection, sections }) {
       icon: <ShieldCheck />,
       title: "Self Defense",
       ageGroup: "Age 4.5 Years+",
-      description: "Build discipline, respect, and self-defense skills.",
+      description: "Build discipline, respect, and self-defense skills. Affiliated to Taekwondo Association of India.",
       benefits: ["Physical fitness", "Mental discipline", "Self-confidence", "Belt progression"],
-      image: "https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80",
+      image: "/imgs/selfdefence.jpeg",
       schedule: "Tue, Thu, Sat - 6:00 PM to 7:00 PM",
       color: "#ef4444",
       instructor: {
@@ -48,7 +48,7 @@ export default function Activities({ scrollToSection, sections }) {
       ageGroup: "Age 4 Years+",
       description: "Develop public speaking, confidence, and emotional intelligence through theatrical arts.",
       benefits: ["Public speaking", "Confidence", "Creativity", "Emotional expression"],
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
+      image: "/imgs/drama.jpeg",
       schedule: "Tue, Thu | Sat, Sun",
       color: "#f59e0b",
       instructor: {
@@ -81,6 +81,7 @@ export default function Activities({ scrollToSection, sections }) {
       description: "Progressive gymnastics training tailored for different age groups—from foundational movement for toddlers to advancing skills for children 5 years+.",
       benefits: ["Flexibility & Strength", "Core Stability", "Balance & Agility", "Progressive Learning"],
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
+      video: "/imgs/gymnastics3.mp4",
       schedule: "Mon, Wed, Fri",
       color: "#10b981",
       instructor: {
@@ -96,7 +97,7 @@ export default function Activities({ scrollToSection, sections }) {
       ageGroup: "Age 3 Years+",
       description: "Learn the fundamentals of roller skating and balance control in a safe environment.",
       benefits: ["Balance", "Leg strength", "Endurance", "Confidence"],
-      image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600&q=80",
+      image: "/imgs/skating.jpeg",
       schedule: "Tue, Thu, Sat",
       color: "#3b82f6",
       instructor: {
@@ -128,7 +129,7 @@ export default function Activities({ scrollToSection, sections }) {
       ageGroup: "Ages 5 Years+",
       description: "Experience the art of fencing, developing sharp reflexes and strategic thinking.\n\nRegistration is open!\nClasses officially commence in July 2026.",
       benefits: ["Reflexes", "Strategy", "Focus", "Discipline"],
-      image: "https://images.unsplash.com/photo-1579952363873-27f1c4f346fa?w=800&q=80",
+      image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fforgefencing.com%2Fwp-content%2Fuploads%2F2024%2F04%2Fforge-fencing-3.png&f=1&nofb=1&ipt=575b4bb939d4703de64a377b739a1fa8eec5602a1cfb39c6a4955f92ae34a31d",
       schedule: "",
       color: "#6366f1",
       instructor: {
@@ -176,7 +177,7 @@ export default function Activities({ scrollToSection, sections }) {
       ageGroup: "Age 5 Years+",
       description: "Master the beautiful game with professional training focusing on ball control, teamwork, and tactical awareness.",
       benefits: ["Stamina & Speed", "Team Collaboration", "Ball Control", "Spatial Awareness"],
-      image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80",
+      image: "/imgs/football.jpeg",
       schedule: "Mon, Wed, Fri",
       color: "#10b981",
       instructor: {
@@ -211,7 +212,18 @@ export default function Activities({ scrollToSection, sections }) {
               onClick={() => toggleCard(index)}
             >
               <div className="activity-image">
-                <img src={activity.image} alt={activity.title} loading="lazy" />
+                {activity.video ? (
+                  <video
+                    src={activity.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="activity-video-bg"
+                  />
+                ) : (
+                  <img src={activity.image} alt={activity.title} loading="lazy" />
+                )}
                 <div className="activity-overlay">
                   <div className="activity-icon">
                     {activity.icon}

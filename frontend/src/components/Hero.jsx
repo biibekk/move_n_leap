@@ -50,7 +50,7 @@ export default function Hero({ scrollToSection, aboutRef, ctaRef }) {
                 </li>
                 <li>
                   <CheckCircle className="check-icon" />
-                  <span><strong>Safe Environment</strong> with full insurance coverage</span>
+                  <span><strong>Safe Environment</strong> with CCTV surveillance</span>
                 </li>
                 <li>
                   <CheckCircle className="check-icon" />
