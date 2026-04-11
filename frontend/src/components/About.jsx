@@ -88,15 +88,15 @@ export default function About({ scrollToSection, ctaRef }) {
           <div className="about-images">
             <div className="image-main">
               <img
-                src="https://s3.ap-south-1.amazonaws.com/assets.klayschools.com/wp-content/uploads/2024/08/30163826/2-3.jpg"
-                alt="Happy students learning at Move N Leap Academy in Noida"
+                src="/imgs/about1.jpg"
+                alt="Students recieving awards"
                 loading="lazy"
               />
             </div>
             <div className="image-secondary">
               <img
-                src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&q=80"
-                alt="Kids performing yoga and fitness at Noida academy"
+                src="/imgs/about2.jpeg"
+                alt="Kids performing yoga and fitness"
                 loading="lazy"
               />
             </div>

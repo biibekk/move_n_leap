@@ -8,56 +8,56 @@ export default function Features({ scrollToSection, ctaRef }) {
       title: "Cognitive Development",
       description: "Enhance problem-solving skills, memory, and strategic thinking through structured activities.",
       color: "#4f46e5",
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80"
+      image: "/imgs/feature1.jpeg"
     },
     {
       icon: <Heart />,
       title: "Emotional Intelligence",
       description: "Build self-awareness, empathy, and emotional regulation in a supportive environment.",
       color: "#ec4899",
-      image: "https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?w=600&q=80"
+      image: "/imgs/feature2.png"
     },
     {
       icon: <Trophy />,
       title: "Physical Excellence",
       description: "Mastering the ABCs—Agility, Balance, and Coordination—to build a solid athletic foundation and lifelong physical confidence.",
       color: "#10b981",
-      image: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80"
+      image: "/imgs/feature3.jpeg"
     },
     {
       icon: <Users />,
       title: "Social Skills",
       description: "Learn teamwork, communication, and make lasting friendships with peers.",
       color: "#f59e0b",
-      image: "https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600&q=80"
+      image: "/imgs/feature4.jpeg"
     },
     {
       icon: <Shield />,
       title: "Safe and Secure Environment",
       description: "CCTV monitored facility with background-checked instructors and strict safety protocols.",
       color: "#6366f1",
-      image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=600&q=80"
+      image: "/imgs/feature5.png"
     },
     {
       icon: <Star />,
       title: "Confidence Building",
       description: "Watch your child's self-esteem soar through achievement and positive reinforcement.",
       color: "#8b5cf6",
-      image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80"
+      image: "/imgs/feature6.jpg"
     },
     {
       icon: <ClipboardCheck />,
       title: "Attendance Tracking",
       description: "Stay updated with real-time attendance tracking through the Capriol mobile application.",
       color: "#f97316",
-      image: "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=600&q=80"
+      image: "/imgs/feature7.png"
     },
     {
       icon: <Smile />,
       title: "Dedicated Caretakers",
       description: "Trained caretakers to ensure your child's safety, hygiene, and comfort during all activities.",
       color: "#06b6d4",
-      image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80"
+      image: "/imgs/feature8.png"
     }
   ];
 
@@ -82,7 +82,7 @@ export default function Features({ scrollToSection, ctaRef }) {
               style={{ '--feature-color': feature.color }}
             >
               <div className="feature-icon-wrapper">
-                <img src={feature.image} alt={`Move N Leap ${feature.title} program for kids in Noida`} className="feature-bg-image" loading="lazy" />
+                <img src={feature.image} alt={`Move N Leap ${feature.title} program for kids`} className="feature-bg-image" loading="lazy" />
                 <div className="feature-icon-overlay">
                   {/* <div className="feature-icon">
                     {feature.icon}

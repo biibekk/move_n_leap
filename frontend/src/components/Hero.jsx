@@ -108,8 +108,8 @@ export default function Hero({ scrollToSection, aboutRef, ctaRef }) {
             <div className={`hero-image ${isVisible ? 'visible' : ''}`}>
               <div className="image-wrapper">
                 <img
-                  src="https://www.teachhub.com/wp-content/uploads/2020/05/Top-10-Indoor-Games-scaled.jpg"
-                  alt="Children participating in fun educational activities at Move N Leap Academy Noida"
+                  src="/imgs/hero1.jpeg"
+                  alt="Children participating in fun educational activities at Move N Leap Academy"
                   className="hero-img"
                   fetchPriority="high"
                 />

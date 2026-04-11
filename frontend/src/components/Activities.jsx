@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SquareActivity, ShieldCheck, Activity, Swords, Music, Drama, Crown, Dumbbell, Palette, Trophy, PenTool, BookOpen } from 'lucide-react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import './Activities.css';
 
 export default function Activities({ scrollToSection, sections }) {
@@ -11,12 +11,11 @@ export default function Activities({ scrollToSection, sections }) {
   };
   const activities = [
     {
-      icon: <ShieldCheck />,
       title: "Self Defense",
       ageGroup: "Age 4.5 Years+",
       description: "Build discipline, respect, and self-defense skills. Affiliated to Taekwondo Association of India.",
       benefits: ["Physical fitness", "Mental discipline", "Self-confidence", "Belt progression"],
-      image: "/imgs/selfdefence.jpeg",
+      image: "/imgs/activity1.png",
       schedule: "Tue, Thu, Sat - 6:00 PM to 7:00 PM",
       color: "#ef4444",
       instructor: {
@@ -27,12 +26,12 @@ export default function Activities({ scrollToSection, sections }) {
       }
     },
     {
-      icon: <Music />,
       title: "Dance",
       ageGroup: "Age 4 Years+",
       description: "Express creativity through various dance forms including Freestyle, Hip-Hop, Contemporary, and Bollywood.",
       benefits: ["Creative expression", "Coordination", "Performance skills", "Team spirit"],
       image: "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=600&q=80",
+      video: "/imgs/dance.mp4",
       schedule: "Tue, Thu, Sat",
       color: "#8b5cf6",
       instructor: {
@@ -43,12 +42,11 @@ export default function Activities({ scrollToSection, sections }) {
       }
     },
     {
-      icon: <Drama />,
       title: "Drama & Theater",
       ageGroup: "Age 4 Years+",
       description: "Develop public speaking, confidence, and emotional intelligence through theatrical arts.",
       benefits: ["Public speaking", "Confidence", "Creativity", "Emotional expression"],
-      image: "/imgs/drama.jpeg",
+      image: "/imgs/drama1.jpeg",
       schedule: "Tue, Thu | Sat, Sun",
       color: "#f59e0b",
       instructor: {
@@ -59,7 +57,6 @@ export default function Activities({ scrollToSection, sections }) {
       }
     },
     {
-      icon: <Crown />,
       title: "Chess",
       ageGroup: "Age 4.5 Years+",
       description: "Master strategic thinking and problem-solving with AICF-Certified Chief Arbiter.",
@@ -75,7 +72,6 @@ export default function Activities({ scrollToSection, sections }) {
       }
     },
     {
-      icon: <Dumbbell />,
       title: "Gymnastics",
       ageGroup: "2-5 Years | 5 Years+",
       description: "Progressive gymnastics training tailored for different age groups—from foundational movement for toddlers to advancing skills for children 5 years+.",
@@ -92,7 +88,6 @@ export default function Activities({ scrollToSection, sections }) {
       }
     },
     {
-      icon: <Activity />,
       title: "Skating",
       ageGroup: "Age 3 Years+",
       description: "Learn the fundamentals of roller skating and balance control in a safe environment.",
@@ -108,12 +103,11 @@ export default function Activities({ scrollToSection, sections }) {
       }
     },
     {
-      icon: <Trophy />,
       title: "Basketball",
       ageGroup: "Age 4 Years+",
       description: "Build team spirit, agility, and fundamental basketball skills from dribbling to shooting.",
       benefits: ["Teamwork", "Agility", "Hand-eye coordination", "Sportmanship"],
-      image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&q=80",
+      image: "/imgs/activity7.png",
       schedule: "Tue, Thu, Sat",
       color: "#f59e0b",
       instructor: {
@@ -124,7 +118,6 @@ export default function Activities({ scrollToSection, sections }) {
       }
     },
     {
-      icon: <Swords />,
       title: "Fencing",
       ageGroup: "Ages 5 Years+",
       description: "Experience the art of fencing, developing sharp reflexes and strategic thinking.\n\nRegistration is open!\nClasses officially commence in July 2026.",
@@ -140,7 +133,6 @@ export default function Activities({ scrollToSection, sections }) {
       }
     },
     {
-      icon: <PenTool />,
       title: "Creative Writing",
       ageGroup: "Age 3 Years+",
       description: "Nurture imagination and improve narrative skills through storytelling and writing workshops.",
@@ -156,7 +148,6 @@ export default function Activities({ scrollToSection, sections }) {
       }
     },
     {
-      icon: <BookOpen />,
       title: "Phonics",
       ageGroup: "Age 3 Years+",
       description: "Build a strong foundation for reading and pronunciation with our structured phonics program.",
@@ -172,7 +163,6 @@ export default function Activities({ scrollToSection, sections }) {
       }
     },
     {
-      icon: <SquareActivity />,
       title: "Football",
       ageGroup: "Age 5 Years+",
       description: "Master the beautiful game with professional training focusing on ball control, teamwork, and tactical awareness.",
@@ -225,9 +215,6 @@ export default function Activities({ scrollToSection, sections }) {
                   <img src={activity.image} alt={activity.title} loading="lazy" />
                 )}
                 <div className="activity-overlay">
-                  <div className="activity-icon">
-                    {activity.icon}
-                  </div>
                 </div>
               </div>
 
