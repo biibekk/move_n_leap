@@ -223,6 +223,171 @@
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
+/* Custom Multiselect Dropdown */
+.custom-multiselect {
+  position: relative;
+  width: 100%;
+}
+
+.multiselect-header {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all var(--transition-base);
+  min-height: 48px;
+}
+
+.multiselect-header:hover {
+  border-color: var(--primary-color);
+}
+
+.multiselect-header.open {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.selected-text {
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
+}
+
+.chevron-icon {
+  color: var(--text-secondary);
+  transition: transform 0.3s ease;
+}
+
+.chevron-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.multiselect-options {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  z-index: 100;
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  animation: slideDown 0.2s ease-out;
+}
+
+.options-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--gray-100);
+  margin-bottom: 0.5rem;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+}
+
+.control-btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-primary);
+  transition: all 0.2s;
+}
+
+.clear-btn {
+  background: var(--gray-100);
+  color: var(--text-secondary);
+}
+
+.clear-btn:hover {
+  background: var(--gray-200);
+}
+
+.done-btn {
+  background: var(--primary-color);
+  color: white;
+}
+
+.done-btn:hover {
+  background: var(--primary-dark);
+}
+
+.multiselect-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 0.75rem; /* Slightly larger padding for touch */
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  -webkit-tap-highlight-color: transparent; /* Remove mobile tap highlight */
+}
+
+@media (max-width: 768px) {
+  .multiselect-options {
+    max-height: 300px; /* Slightly taller on mobile */
+  }
+
+  .multiselect-option {
+    padding: 1rem 0.75rem; /* Even larger touch area for mobile */
+  }
+}
+
+.multiselect-option:active {
+  background: var(--gray-100);
+}
+
+.multiselect-option:hover {
+  background: var(--gray-50);
+}
+
+.multiselect-option.selected {
+  background: rgba(79, 70, 229, 0.05);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.checkbox-box {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--gray-300);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.multiselect-option.selected .checkbox-box {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.dropdown-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+}
+
 .form-submit-btn {
   width: 100%;
   display: flex;

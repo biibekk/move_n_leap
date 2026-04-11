@@ -78,6 +78,9 @@ export default function Navbar({ scrolled, isMenuOpen, setIsMenuOpen, scrollToSe
               <a href="tel:+919319693858" className="nav-phone">
                 <span role="img" aria-label="phone"><PhoneIcon /></span> +91 93196 93858
               </a>
+              <a href="tel:+919198946655" className="nav-phone">
+                <span role="img" aria-label="phone"><PhoneIcon /></span> +91 91989 46655
+              </a>
               <button
                 className="btn btn-primary btn-sm shimmer-btn"
                 onClick={() => scrollToSection(ctaRef)}

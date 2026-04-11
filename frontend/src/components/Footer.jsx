@@ -1,4 +1,4 @@
-import { Check, Star, Trophy, Award, MapPin, Phone, Mail, Clock, Shield, Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
+import { Check, Star, Trophy, Award, MapPin, Phone, Mail, Clock, ShieldCheck, Instagram } from 'lucide-react';
 import './Footer.css';
 
 export default function Footer({ scrollToSection, ctaRef }) {
@@ -24,17 +24,14 @@ export default function Footer({ scrollToSection, ctaRef }) {
               Building confidence, discipline, and lifelong skills since 2010.
             </p>
             <div className="footer-social">
-              <a href="#" aria-label="Facebook" className="social-link">
-                <Facebook />
-              </a>
-              <a href="#" aria-label="Instagram" className="social-link">
+              <a
+                href="https://www.instagram.com/move_n_leap?utm_source=qr&igsh=MThwMXd3cnQ4Nm05aQ=="
+                aria-label="Instagram"
+                className="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Instagram />
-              </a>
-              <a href="#" aria-label="YouTube" className="social-link">
-                <Youtube />
-              </a>
-              <a href="#" aria-label="Twitter" className="social-link">
-                <Twitter />
               </a>
             </div>
           </div>
@@ -70,8 +67,13 @@ export default function Footer({ scrollToSection, ctaRef }) {
               <li><a href="#activities">Dance Classes</a></li>
               <li><a href="#activities">Drama & Theater</a></li>
               <li><a href="#activities">Chess Training</a></li>
-              <li><a href="#activities">Fitness & Yoga</a></li>
-              <li><a href="#activities">Art & Craft</a></li>
+              <li><a href="#activities">Gymnastics</a></li>
+              <li><a href="#activities">Skating</a></li>
+              <li><a href="#activities">Basketball</a></li>
+              <li><a href="#activities">Fencing</a></li>
+              <li><a href="#activities">Football</a></li>
+              <li><a href="#activities">Creative Writing</a></li>
+              <li><a href="#activities">Phonics</a></li>
             </ul>
           </div>
 
@@ -81,11 +83,20 @@ export default function Footer({ scrollToSection, ctaRef }) {
             <ul className="footer-contact">
               <li>
                 <MapPin className="contact-icon" />
-                <span>B-115, C Block, Sector 40, Noida,<br />Uttar Pradesh 201303, India</span>
+                <a
+                  href="https://maps.app.goo.gl/H2QUrDTMUvZxfgjt6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  B-115, C Block, Sector 40, Noida,<br />Uttar Pradesh 201303, India
+                </a>
               </li>
               <li>
                 <Phone className="contact-icon" />
-                <a href="tel:+919319693858">+91 9319693858</a>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <a href="tel:+919319693858">+91 9319693858</a>
+                  <a href="tel:+919198946655">+91 91989 46655</a>
+                </div>
               </li>
               <li>
                 <Mail className="contact-icon" />
@@ -104,22 +115,22 @@ export default function Footer({ scrollToSection, ctaRef }) {
           <div className="badge-item">
             {/* <span className="badge-icon">🏆</span> */}
             <Trophy className="proof-icon" />
-            <span>Certified Academy</span>
+            <span>Recognized Academy</span>
           </div>
           <div className="badge-item">
             {/* <span className="badge-icon">🛡️</span> */}
-            <Shield className="proof-icon" />
-            <span>Fully Insured</span>
+            <ShieldCheck className="proof-icon" />
+            <span>Safe Environment</span>
           </div>
           <div className="badge-item">
             {/* <span className="badge-icon">✓</span> */}
             <Check className="proof-icon" />
-            <span>Background Checked Staff</span>
+            <span>Certified Coaches</span>
           </div>
           <div className="badge-item">
             {/* <span className="badge-icon">⭐</span> */}
             <Star className="proof-icon" />
-            <span>4.8/5 Rated</span>
+            <span>4.7/5 Rated</span>
           </div>
         </div>
 
@@ -131,12 +142,12 @@ export default function Footer({ scrollToSection, ctaRef }) {
               <a href="#privacy">Privacy Policy</a>
               <span>•</span>
               <a href="#terms">Terms & Conditions</a>
-              <span>•</span>
-              <a href="#refund">Refund Policy</a>
+              {/* <span>•</span> */}
+              {/* <a href="#refund">Refund Policy</a> */}
             </div>
           </div>
           <div className="footer-credit">
-            <p>Made with ❤️ for kids in Noida</p>
+            <p>Made with ❤️ for kids</p>
           </div>
         </div>
       </div>

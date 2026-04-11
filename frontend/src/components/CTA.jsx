@@ -1,21 +1,32 @@
 import { Calendar, CheckCircle, ArrowRight, Flame } from 'lucide-react';
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 import './CTA.css';
 
 
 export default function CTA() {
+  const spotsLeft = useMemo(() => Math.floor(Math.random() * (12 - 5 + 1)) + 5, []);
   const [formData, setFormData] = useState({
     parentName: "",
     phone: "",
     childAge: "",
-    activity: "",
+    activities: [],
   });
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleActivityChange = (activity) => {
+    setFormData((prev) => {
+      const activities = prev.activities.includes(activity)
+        ? prev.activities.filter((a) => a !== activity)
+        : [...prev.activities, activity];
+      return { ...prev, activities };
     });
   };
 
@@ -58,8 +69,9 @@ export default function CTA() {
       parentName: "",
       phone: "",
       childAge: "",
-      activity: "",
+      activities: [],
     });
+    setIsDropdownOpen(false);
   };
 
   const handleScrollToForm = () => {
@@ -96,15 +108,15 @@ export default function CTA() {
                 </li>
                 <li>
                   <CheckCircle className="check-icon" />
-                  <span>No credit card required – completely risk-free</span>
-                </li>
-                <li>
-                  <CheckCircle className="check-icon" />
                   <span>Flexible schedule – classes 6 days a week</span>
                 </li>
                 <li>
                   <CheckCircle className="check-icon" />
-                  <span>30-day satisfaction guarantee – or your money back</span>
+                  <span>Safe & secure environment – CCTV monitored facility</span>
+                </li>
+                <li>
+                  <CheckCircle className="check-icon" />
+                  <span>30-day satisfaction guarantee</span>
                 </li>
               </ul>
 
@@ -185,22 +197,94 @@ export default function CTA() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="activity">Interested Activity *</label>
-                <select
-                  id="activity"
-                  name="activity"
-                  value={formData.activity}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="">Choose activity</option>
-                  <option value="self-defense">Self Defense</option>
-                  <option value="dance">Dance</option>
-                  <option value="drama">Drama & Theater</option>
-                  <option value="chess">Chess</option>
-                  <option value="fitness">Fitness & Yoga</option>
-                  <option value="art">Art & Craft</option>
-                </select>
+                <label htmlFor="activity-dropdown">Interested Activities *</label>
+                <div className="custom-multiselect">
+                  <div
+                    className={`multiselect-header ${isDropdownOpen ? "open" : ""}`}
+                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                    id="activity-dropdown"
+                  >
+                    <span className="selected-text">
+                      {formData.activities.length === 0
+                        ? "Choose activities..."
+                        : formData.activities.join(", ")}
+                    </span>
+                    <svg
+                      className={`chevron-icon ${isDropdownOpen ? "rotate" : ""}`}
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M6 9l6 6 6-6" />
+                    </svg>
+                  </div>
+
+                  {isDropdownOpen && (
+                    <>
+                      <div className="dropdown-overlay" onClick={() => setIsDropdownOpen(false)}></div>
+                      <div className="multiselect-options">
+                        <div className="options-controls">
+                          <button
+                            type="button"
+                            className="control-btn clear-btn"
+                            onClick={() => setFormData({ ...formData, activities: [] })}
+                          >
+                            Clear All
+                          </button>
+                          <button
+                            type="button"
+                            className="control-btn done-btn"
+                            onClick={() => setIsDropdownOpen(false)}
+                          >
+                            Done
+                          </button>
+                        </div>
+                        {[
+                          "Self Defense",
+                          "Dance",
+                          "Drama & Theater",
+                          "Chess",
+                          "Gymnastics",
+                          "Skating",
+                          "Basketball",
+                          "Fencing",
+                          "Creative Writing",
+                          "Phonics",
+                          "Football",
+                        ].map((activity) => (
+                          <div
+                            key={activity}
+                            className={`multiselect-option ${formData.activities.includes(activity) ? "selected" : ""
+                              }`}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleActivityChange(activity);
+                            }}
+                          >
+                            <div className="checkbox-box">
+                              {formData.activities.includes(activity) && (
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4">
+                                  <path d="M20 6L9 17l-5-5" />
+                                </svg>
+                              )}
+                            </div>
+                            {activity}
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+                {formData.activities.length === 0 && (
+                  <input
+                    type="checkbox"
+                    style={{ position: "absolute", opacity: 0, pointerEvents: "none" }}
+                    required
+                  />
+                )}
               </div>
 
               <button type="submit" className="form-submit-btn shimmer-btn">
@@ -224,7 +308,7 @@ export default function CTA() {
               <Flame className="badge-icon" />
               Limited Spots Available
             </span>
-            <p>Only <strong>12 spots left</strong> for this month's intake. Book now to secure your child's place!</p>
+            <p>Only <strong>{spotsLeft} spots left</strong> for this month's intake. Book now to secure your child's place!</p>
             {/* <p>Only <strong>12 spots left</strong> this month. Book now!</p> */}
           </div>
           {/* </div> */}

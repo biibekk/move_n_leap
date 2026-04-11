@@ -1,4 +1,4 @@
-import { Brain, Heart, Trophy, Users, Shield, Star } from 'lucide-react';
+import { Brain, Heart, Trophy, Users, Shield, Star, ClipboardCheck, Smile } from 'lucide-react';
 import './Features.css';
 
 export default function Features({ scrollToSection, ctaRef }) {
@@ -19,8 +19,8 @@ export default function Features({ scrollToSection, ctaRef }) {
     },
     {
       icon: <Trophy />,
-      title: "Physical Fitness",
-      description: "Develop coordination, strength, and discipline through expert-led sports training.",
+      title: "Physical Excellence",
+      description: "Mastering the ABCs—Agility, Balance, and Coordination—to build a solid athletic foundation and lifelong physical confidence.",
       color: "#10b981",
       image: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80"
     },
@@ -33,8 +33,8 @@ export default function Features({ scrollToSection, ctaRef }) {
     },
     {
       icon: <Shield />,
-      title: "Safe Environment",
-      description: "Fully insured facility with background-checked instructors and strict safety protocols.",
+      title: "Safe and Secure Environment",
+      description: "CCTV monitored facility with background-checked instructors and strict safety protocols.",
       color: "#6366f1",
       image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=600&q=80"
     },
@@ -44,6 +44,20 @@ export default function Features({ scrollToSection, ctaRef }) {
       description: "Watch your child's self-esteem soar through achievement and positive reinforcement.",
       color: "#8b5cf6",
       image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80"
+    },
+    {
+      icon: <ClipboardCheck />,
+      title: "Attendance Tracking",
+      description: "Stay updated with real-time attendance tracking through the Capriol mobile application.",
+      color: "#f97316",
+      image: "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=600&q=80"
+    },
+    {
+      icon: <Smile />,
+      title: "Dedicated Caretakers",
+      description: "Trained caretakers to ensure your child's safety, hygiene, and comfort during all activities.",
+      color: "#06b6d4",
+      image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80"
     }
   ];
 

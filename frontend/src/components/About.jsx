@@ -72,7 +72,7 @@ export default function About({ scrollToSection, ctaRef }) {
                 Book Free Trial Class
               </button>
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=B-115,+C+Block,+Sector+40,+Noida,+Uttar+Pradesh+201303"
+                href="https://maps.app.goo.gl/H2QUrDTMUvZxfgjt6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline btn-cta-about-outline"

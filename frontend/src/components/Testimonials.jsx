@@ -53,6 +53,14 @@ export default function Testimonials({ scrollToSection, ctaRef }) {
       rating: 5,
       text: "We struggled with Arjun's reading skills until we joined the Phonics program. The multi-sensory approach really works for young kids. He started blending words faster than we expected, and now he loves picking up storybooks on his own.",
       activity: "Phonics"
+    },
+    {
+      name: "Sanjay Mehra",
+      role: "Father of 10-year-old Kabir",
+      image: "https://randomuser.me/api/portraits/men/16.jpg",
+      rating: 5,
+      text: "The football coaching here is outstanding. Coach Rahul doesn't just teach techniques; he focuses on character building and teamwork. My son's stamina has improved significantly, and he's learned to handle both wins and losses with grace.",
+      activity: "Football"
     }
   ];
 
@@ -126,40 +134,24 @@ export default function Testimonials({ scrollToSection, ctaRef }) {
                 onClick={() => setExpandedIndex(isExpanded ? (index === 0 ? 0 : -1) : index)}
               >
                 <div className="testimonial-header-row justify-end">
-                  {index !== 0 && (
-                    <div className="expand-trigger">
-                      {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                    </div>
-                  )}
+                  <div className="expand-trigger mobile-only">
+                    {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                  </div>
                 </div>
 
-                {isExpanded ? (
-                  <div className="expanded-content">
-                    <p className="testimonial-text full">
+                <div className="testimonial-body">
+                  <div className="testimonial-content">
+                    <p className="testimonial-text">
                       {testimonial.text}
                     </p>
-
                     <div className="testimonial-activity">
                       <span>Program: {testimonial.activity}</span>
                     </div>
-
-                    <div className="testimonial-author">
-                      <img src={testimonial.image} alt={testimonial.name} />
-                      <div>
-                        <strong>{testimonial.name}</strong>
-                        <span>{testimonial.role}</span>
-                        <div className="testimonial-rating">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} className="star-icon filled" />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
                   </div>
-                ) : (
-                  <div className="testimonial-author collapsed-view">
+
+                  <div className="testimonial-author">
                     <img src={testimonial.image} alt={testimonial.name} />
-                    <div>
+                    <div className="author-details">
                       <strong>{testimonial.name}</strong>
                       <span>{testimonial.role}</span>
                       <div className="testimonial-rating">
@@ -169,7 +161,7 @@ export default function Testimonials({ scrollToSection, ctaRef }) {
                       </div>
                     </div>
                   </div>
-                )}
+                </div>
               </div>
             );
           })}

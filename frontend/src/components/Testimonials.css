@@ -132,38 +132,23 @@
 /* Testimonials Grid */
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-bottom: 4rem;
 }
 
 .testimonial-card {
   background: white;
-  padding: 1.25rem;
+  padding: 2.5rem;
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-lg);
-  border: 2px solid var(--gray-100);
+  border: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   cursor: pointer;
 }
 
-.testimonial-card.collapsed {
-  padding: 0.5rem;
-  background: white;
-}
-
-.testimonial-card.collapsed .testimonial-header-row {
-  margin-bottom: 0;
-}
-
-.testimonial-card.collapsed .testimonial-author {
-  border-top: none;
-  padding-top: 0;
-}
-
 .testimonial-card.featured {
-  grid-column: 1 / -1;
   background: white;
 }
 
@@ -186,6 +171,10 @@
   z-index: 5;
 }
 
+.expand-trigger.mobile-only {
+  display: none;
+}
+
 .testimonial-card:hover {
   border-color: var(--primary-color);
   transform: translateY(-4px);
@@ -203,29 +192,21 @@
   height: 16px;
 }
 
+.testimonial-card.active .testimonial-content {
+  display: block;
+}
+
 .testimonial-text {
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text-secondary);
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   transition: all 0.3s ease;
 }
 
-.testimonial-text.truncated {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  color: var(--text-secondary);
-  opacity: 0.8;
-}
-
-.testimonial-text.full {
-  margin-bottom: 0.5rem;
-}
-
-.expanded-content {
-  animation: fadeIn 0.4s ease-out;
+.testimonial-body {
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes fadeIn {
@@ -308,11 +289,13 @@
 .trust-indicators {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 3rem;
+  gap: 1.5rem;
+  padding: 2rem 2rem;
   background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-2xl);
+  /* max-width: 900px; */
+  margin: 0 auto;
 }
 
 .trust-item {
@@ -322,10 +305,10 @@
 
 .trust-number {
   display: block;
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: 900;
   line-height: 1;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -334,7 +317,7 @@
 
 .trust-label {
   display: block;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
 }
@@ -353,24 +336,77 @@
   .testimonials-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
+
+  .testimonial-card {
+    padding: 2.5rem;
+    cursor: default;
+  }
+
+  .testimonial-author {
+    border-top: 1px solid var(--gray-200);
+    margin-top: 0.5rem;
+  }
 }
 
 @media (max-width: 768px) {
   .testimonials {
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
   }
 
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
 
+  .testimonial-card {
+    padding: 1rem;
+  }
+
+  .testimonial-text {
+    margin-bottom: 0.5rem;
+  }
+
+  .testimonial-activity {
+    margin-bottom: 0;
+  }
+
+  .expand-trigger.mobile-only {
+    display: flex;
+  }
+
+  .testimonial-card.collapsed {
+    padding: 0.5rem;
+    background: white;
+  }
+
+  .testimonial-card.collapsed .testimonial-header-row {
+    margin-bottom: 0;
+  }
+
+  .testimonial-card.collapsed .testimonial-content {
+    display: none;
+  }
+
+  .testimonial-card.collapsed .testimonial-author {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .testimonial-card.active .testimonial-content {
+    display: block;
+    animation: fadeIn 0.4s ease-out;
+  }
+
   .trust-indicators {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1.5rem 1rem;
   }
 
   .trust-number {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
+  }
+
+  .trust-label {
+    font-size: 0.75rem;
   }
 }

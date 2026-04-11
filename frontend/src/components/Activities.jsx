@@ -62,9 +62,9 @@ export default function Activities({ scrollToSection, sections }) {
       icon: <Crown />,
       title: "Chess",
       ageGroup: "Age 4.5 Years+",
-      description: "Master strategic thinking and problem-solving with FIDE-certified chess coaches.",
+      description: "Master strategic thinking and problem-solving with AICF-Certified Chief Arbiter.",
       benefits: ["Strategic thinking", "Problem solving", "Focus", "Tournament prep"],
-      image: "https://images.unsplash.com/photo-1586165368502-1bad197a6461?w=600&q=80",
+      image: "imgs/chess1.jpeg",
       schedule: "Mon, Wed",
       color: "#06b6d4",
       instructor: {
@@ -116,25 +116,25 @@ export default function Activities({ scrollToSection, sections }) {
       schedule: "Tue, Thu, Sat",
       color: "#f59e0b",
       instructor: {
-        name: "Rahul ",
+        name: "Mr. Aditya",
         credentials: "Professional Basketball Coach",
-        experience: "8+ years coaching school teams",
-        info: ""
+        experience: "5+ years of coaching experience",
+        info: "Focuses on developing core basketball skills like dribbling and shooting while fostering a strong sense of teamwork and sportsmanship."
       }
     },
     {
       icon: <Swords />,
       title: "Fencing",
       ageGroup: "Ages 5 Years+",
-      description: "Experience the art of fencing, developing sharp reflexes and strategic thinking.",
+      description: "Experience the art of fencing, developing sharp reflexes and strategic thinking.\n\nRegistration is open!\nClasses officially commence in July 2026.",
       benefits: ["Reflexes", "Strategy", "Focus", "Discipline"],
-      image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80",
-      schedule: "Wed, Fri - 6:00 PM to 7:30 PM",
+      image: "https://images.unsplash.com/photo-1579952363873-27f1c4f346fa?w=800&q=80",
+      schedule: "",
       color: "#6366f1",
       instructor: {
-        name: "Sandeep Singh",
-        credentials: "Fencing Instructor, National Medalist",
-        experience: "12+ years in competitive fencing",
+        name: "",
+        credentials: "",
+        experience: "",
         info: ""
       }
     },
@@ -148,10 +148,10 @@ export default function Activities({ scrollToSection, sections }) {
       schedule: "Sat, Sun",
       color: "#ec4899",
       instructor: {
-        name: "Meera Nair",
-        credentials: "Published Author & Writing Coach",
-        experience: "15+ years in literature education",
-        info: ""
+        name: "Ms. Saniya",
+        credentials: "Published Author & Certified Creative Writing Mentor",
+        experience: "9+ years",
+        info: "Dedicated to helping children unlock their imagination through creative storytelling, vocabulary building, and expressive writing techniques."
       }
     },
     {
@@ -168,6 +168,22 @@ export default function Activities({ scrollToSection, sections }) {
         credentials: "Foundational Literacy Specialists",
         experience: "20+ and 5+ years of experience",
         info: "A dedicated team focused on building strong reading foundations and linguistic confidence through interactive methods."
+      }
+    },
+    {
+      icon: <SquareActivity />,
+      title: "Football",
+      ageGroup: "Age 5 Years+",
+      description: "Master the beautiful game with professional training focusing on ball control, teamwork, and tactical awareness.",
+      benefits: ["Stamina & Speed", "Team Collaboration", "Ball Control", "Spatial Awareness"],
+      image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80",
+      schedule: "Mon, Wed, Fri",
+      color: "#10b981",
+      instructor: {
+        name: "Mr. Arjun Bist, Mr. Saurabh",
+        credentials: "Certified Youth Football Coach",
+        experience: "5+ years professional coaching",
+        info: "Focuses on developing core soccer skills while fostering a love for the game and team spirit."
       }
     }
   ];
