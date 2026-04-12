@@ -30,8 +30,7 @@ export default function Activities({ scrollToSection, sections }) {
       ageGroup: "Age 4 Years+",
       description: "Express creativity through various dance forms including Freestyle, Hip-Hop, Contemporary, and Bollywood.",
       benefits: ["Creative expression", "Coordination", "Performance skills", "Team spirit"],
-      image: "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=600&q=80",
-      video: "/imgs/dance.mp4",
+      image: "/imgs/activity2.png",
       schedule: "Tue, Thu, Sat",
       color: "#8b5cf6",
       instructor: {
@@ -76,8 +75,7 @@ export default function Activities({ scrollToSection, sections }) {
       ageGroup: "2-5 Years | 5 Years+",
       description: "Progressive gymnastics training tailored for different age groups—from foundational movement for toddlers to advancing skills for children 5 years+.",
       benefits: ["Flexibility & Strength", "Core Stability", "Balance & Agility", "Progressive Learning"],
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
-      video: "/imgs/gymnastics3.mp4",
+      image: "/imgs/activity5.png",
       schedule: "Mon, Wed, Fri",
       color: "#10b981",
       instructor: {

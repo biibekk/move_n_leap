@@ -110,7 +110,7 @@ export default function Features({ scrollToSection, ctaRef }) {
             <span>Years of Excellence</span>
           </div>
           <div className="stat-card">
-            <strong>4.8/5</strong>
+            <strong>4.7/5</strong>
             <span>Average Rating</span>
           </div>
         </div>

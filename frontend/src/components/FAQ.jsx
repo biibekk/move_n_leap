@@ -12,15 +12,15 @@ export default function FAQ() {
     },
     {
       question: "What safety measures do you have in place?",
-      answer: "Safety is our top priority. All instructors are background-checked and certified. We maintain comprehensive insurance coverage, follow strict health protocols, and ensure proper supervision ratios. Our facility is equipped with CCTV cameras, first-aid stations, and emergency procedures."
+      answer: "Safety is our top priority. All instructors are background-checked and certified. We follow strict health protocols, and ensure proper supervision. Our facility is equipped with CCTV cameras, first-aid."
     },
     {
       question: "What age groups do you accept?",
-      answer: "We accept children from ages 4 to 16 years old. Different programs have specific age requirements: Dance (4-15), Taekwondo (5-16), Chess (7-16), Drama (6-14), Fitness (8-16), and Art (5-13). During registration, we'll help you find the perfect program for your child's age."
+      answer: "We accept children from ages 3 to 16 years old. Different programs have specific age requirements: Dance (4-15), Taekwondo (4-16), Chess (5-16), Drama (6-14), Gymnastics (2-5 | 5+). During registration, we'll help you find the perfect program for your child's age."
     },
     {
       question: "Can I cancel or change the program anytime?",
-      answer: "Yes, we offer flexible cancellation and program transfer options. You can cancel with a month's notice, and we provide pro-rated refunds. Switching between programs is easy and can be done after consulting with our program coordinator."
+      answer: "Yes, we offer flexible cancellation and program transfer options. You can cancel with a month's notice. Switching between programs is easy and can be done after consulting with our program coordinator."
     },
     {
       question: "What are the class timings and schedule?",
@@ -28,15 +28,15 @@ export default function FAQ() {
     },
     {
       question: "How qualified are the instructors?",
-      answer: "All our instructors hold national or international certifications in their respective fields. For Taekwondo, we have certified black belt instructors. Chess coaches are FIDE-certified. Dance and Drama instructors have professional performance backgrounds and teaching certifications. Average experience is 8+ years."
+      answer: "All our instructors hold national or international certifications in their respective fields. For Taekwondo, we have certified black belt instructors. Chess coaches are AICF certified. Dance and Drama instructors have professional performance backgrounds and teaching certifications. Average experience is 8+ years."
     },
     {
       question: "What is included in the fee?",
-      answer: "Our fee includes all training sessions, equipment usage, progress reports, performance opportunities, certificate upon completion, and comprehensive insurance coverage. Uniforms for Taekwondo and competition fees are separate and optional."
+      answer: "Our fee includes all training sessions, equipment usage, progress reports, performance opportunities, certificate upon completion. Uniforms for Taekwondo and competition fees are separate and optional."
     },
     {
       question: "How do you track my child's progress?",
-      answer: "We provide regular progress reports every month, parent-teacher meetings quarterly, and real-time updates through our parent app. You'll receive feedback on skill development, behavior, attendance, and areas of improvement. We also conduct periodic assessments."
+      answer: "We provide regular progress reports every month. You'll receive feedback on skill development, behavior, attendance, and areas of improvement. We also conduct periodic assessments."
     },
     {
       question: "Can my child join multiple programs?",
@@ -44,7 +44,7 @@ export default function FAQ() {
     },
     {
       question: "What if my child doesn't like the program?",
-      answer: "We have a 30-day satisfaction guarantee. If your child isn't happy within the first month, we'll work with you to switch programs or provide a full refund. Our goal is to find the right fit for every child."
+      answer: "We have a 30-day satisfaction guarantee. If your child isn't happy within the first month, we'll work with you to switch programs. Our goal is to find the right fit for every child."
     }
   ];
 
