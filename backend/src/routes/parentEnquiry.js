@@ -40,7 +40,7 @@ router.post("/", async (req, res) => {
 
     resend.emails.send({
       from: "Move N Leap Academy <onboarding@resend.dev>",
-      to: process.env.CLIENT_EMAIL || "divas.shrestha20@gmail.com",
+      to: "movenleapacademy@gmail.com",
       subject: `New Enquiry: ${parentName} (${activitiesList})`,
       html: `
         <!DOCTYPE html>

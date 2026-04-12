@@ -1,8 +1,7 @@
-import { Calendar, CheckCircle, ArrowRight, Flame } from 'lucide-react';
+import { CheckCircle, Flame } from 'lucide-react';
 import { useState, useMemo } from "react";
 
 import './CTA.css';
-
 
 export default function CTA() {
   const spotsLeft = useMemo(() => Math.floor(Math.random() * (12 - 5 + 1)) + 5, []);
@@ -23,7 +22,7 @@ export default function CTA() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    
+
     if (name === "phone") {
       // Allow ONLY digits and limit to 10 characters
       const cleanedValue = value.replace(/\D/g, "").slice(0, 10);
@@ -31,7 +30,7 @@ export default function CTA() {
         ...formData,
         [name]: cleanedValue,
       });
-      
+
       // Clear error as user types
       if (errors.phone) {
         setErrors({ ...errors, phone: "" });
@@ -55,7 +54,7 @@ export default function CTA() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     // Validate phone number
     if (!validatePhone(formData.phone)) {
       setErrors({ ...errors, phone: "Please enter a valid 10-digit phone number" });
