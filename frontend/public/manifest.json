@@ -1,6 +1,7 @@
 {
   "short_name": "Move N Leap",
   "name": "Move N Leap Academy - Kids Academy in Noida",
+  "description": "Empowering children through Self Defense, Dance, Gymnastics, Skating, Drama, Football, Phonics & Chess in Noida.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,16 +11,18 @@
     {
       "src": "android-chrome-192x192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "android-chrome-512x512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#4f46e5",
+  "theme_color": "#fbbf24",
   "background_color": "#ffffff"
 }

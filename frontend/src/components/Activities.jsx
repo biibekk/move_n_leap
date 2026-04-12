@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
 import './Activities.css';
 
 export default function Activities({ scrollToSection, sections }) {
@@ -106,7 +105,7 @@ export default function Activities({ scrollToSection, sections }) {
       description: "Build team spirit, agility, and fundamental basketball skills from dribbling to shooting.",
       benefits: ["Teamwork", "Agility", "Hand-eye coordination", "Sportmanship"],
       image: "/imgs/activity7.png",
-      schedule: "Tue, Thu, Sat",
+      schedule: "Mon, Wed, Fri",
       color: "#f59e0b",
       instructor: {
         name: "Mr. Aditya",
@@ -150,8 +149,8 @@ export default function Activities({ scrollToSection, sections }) {
       ageGroup: "Age 3 Years+",
       description: "Build a strong foundation for reading and pronunciation with our structured phonics program.",
       benefits: ["Reading speed", "Spelling", "Pronunciation", "Confidence"],
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80",
-      schedule: "Mon, Wed, Fri",
+      image: "/imgs/activity10.png",
+      schedule: "Sat, Sun",
       color: "#8b5cf6",
       instructor: {
         name: "Ms. Sumati Anand & Ms. Yogita Pandey",
@@ -166,7 +165,7 @@ export default function Activities({ scrollToSection, sections }) {
       description: "Master the beautiful game with professional training focusing on ball control, teamwork, and tactical awareness.",
       benefits: ["Stamina & Speed", "Team Collaboration", "Ball Control", "Spatial Awareness"],
       image: "/imgs/football.jpeg",
-      schedule: "Mon, Wed, Fri",
+      schedule: "Tue, Thu, Sat",
       color: "#10b981",
       instructor: {
         name: "Mr. Arjun Bist, Mr. Saurabh",
