@@ -243,3 +243,10 @@ h6 {
     left: 160%;
   }
 }
+
+/* Responsive Utilities */
+@media (min-width: 769px) {
+  .mobile-view-only {
+    display: none !important;
+  }
+}

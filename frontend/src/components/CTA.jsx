@@ -144,7 +144,7 @@ export default function CTA() {
               {/* CTA Buttons */}
               <div className="cta-buttons">
                 <button
-                  className="btn btn-primary btn-lg shimmer-btn"
+                  className="btn btn-primary btn-lg shimmer-btn mobile-view-only"
                   onClick={handleScrollToForm}
                 >
                   Book Your Free Trial Now

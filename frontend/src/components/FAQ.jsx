@@ -101,7 +101,7 @@ export default function FAQ() {
               <h3>Still Have Questions?</h3>
               <p>Our friendly team is here to help. Reach out and we'll get back to you within 24 hours.</p>
               <div className="cta-box-actions">
-                <a href="https://wa.me/9319693858" className="contact-btn whatsapp">
+                <a href="https://wa.me/+919319693858" className="contact-btn whatsapp">
                   WhatsApp Chat
                 </a>
                 <a href="tel:+91 9319693858" className="contact-btn phone">

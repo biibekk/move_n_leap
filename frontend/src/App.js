@@ -16,6 +16,7 @@ import { useRef, useState, useEffect } from "react";
 
 import { Routes, Route } from "react-router-dom";
 import NotFound from "./components/NotFound";
+import SocialFloat from "./components/SocialFloat";
 
 export default function App() {
   const heroRef = useRef(null);
@@ -98,6 +99,8 @@ export default function App() {
             <section ref={ctaRef}><CTA /></section>
 
             <Footer scrollToSection={scrollToSection} ctaRef={ctaRef} />
+
+            <SocialFloat />
           </>
         }
       />
