@@ -1,4 +1,4 @@
-import { Star, Quote, ChevronDown, ChevronUp, User } from 'lucide-react';
+import { Star, ChevronDown, ChevronUp, User } from 'lucide-react';
 import { useState } from 'react';
 import './Testimonials.css';
 

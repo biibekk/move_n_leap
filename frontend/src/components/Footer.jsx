@@ -1,4 +1,4 @@
-import { Check, Star, Trophy, Award, MapPin, Phone, Mail, Clock, ShieldCheck, Instagram } from 'lucide-react';
+import { Check, Star, Trophy, MapPin, Phone, Mail, Clock, ShieldCheck, Instagram } from 'lucide-react';
 import './Footer.css';
 
 export default function Footer({ scrollToSection, ctaRef }) {
