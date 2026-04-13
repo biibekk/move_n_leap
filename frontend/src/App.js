@@ -14,6 +14,9 @@ import CTA from "./components/CTA";
 
 import { useRef, useState, useEffect } from "react";
 
+import { Routes, Route } from "react-router-dom";
+import NotFound from "./components/NotFound";
+
 export default function App() {
   const heroRef = useRef(null);
   const featuresRef = useRef(null);
@@ -61,36 +64,44 @@ export default function App() {
   };
 
   return (
-    <>
-      <Navbar
-        scrolled={scrolled}
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-        scrollToSection={scrollToSection}
-        sections={{
-          heroRef,
-          featuresRef,
-          activitiesRef,
-          aboutRef,
-          testimonialsRef,
-          faqRef,
-          ctaRef,
-        }}
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Navbar
+              scrolled={scrolled}
+              isMenuOpen={isMenuOpen}
+              setIsMenuOpen={setIsMenuOpen}
+              scrollToSection={scrollToSection}
+              sections={{
+                heroRef,
+                featuresRef,
+                activitiesRef,
+                aboutRef,
+                testimonialsRef,
+                faqRef,
+                ctaRef,
+              }}
+            />
+
+            <section ref={heroRef}>
+              <Hero scrollToSection={scrollToSection} aboutRef={aboutRef} ctaRef={ctaRef} />
+            </section>
+            <section ref={featuresRef}><Features scrollToSection={scrollToSection} ctaRef={ctaRef} /></section>
+            <section ref={activitiesRef}>
+              <Activities scrollToSection={scrollToSection} sections={{ ctaRef }} />
+            </section>
+            <section ref={aboutRef}><About scrollToSection={scrollToSection} ctaRef={ctaRef} /></section>
+            <section ref={testimonialsRef}><Testimonials scrollToSection={scrollToSection} ctaRef={ctaRef} /></section>
+            <section ref={faqRef}><FAQ /></section>
+            <section ref={ctaRef}><CTA /></section>
+
+            <Footer scrollToSection={scrollToSection} ctaRef={ctaRef} />
+          </>
+        }
       />
-
-      <section ref={heroRef}>
-        <Hero scrollToSection={scrollToSection} aboutRef={aboutRef} ctaRef={ctaRef} />
-      </section>
-      <section ref={featuresRef}><Features scrollToSection={scrollToSection} ctaRef={ctaRef} /></section>
-      <section ref={activitiesRef}>
-        <Activities scrollToSection={scrollToSection} sections={{ ctaRef }} />
-      </section>
-      <section ref={aboutRef}><About scrollToSection={scrollToSection} ctaRef={ctaRef} /></section>
-      <section ref={testimonialsRef}><Testimonials scrollToSection={scrollToSection} ctaRef={ctaRef} /></section>
-      <section ref={faqRef}><FAQ /></section>
-      <section ref={ctaRef}><CTA /></section>
-
-      <Footer scrollToSection={scrollToSection} ctaRef={ctaRef} />
-    </>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }

@@ -40,7 +40,7 @@ router.post("/", async (req, res) => {
 
     resend.emails.send({
       from: "Move N Leap Academy <onboarding@resend.dev>",
-      to: "movenleapacademy@gmail.com",
+      to: ["divas.shrestha20@gmail.com"],
       subject: `New Enquiry: ${parentName} (${activitiesList})`,
       html: `
         <!DOCTYPE html>
@@ -118,8 +118,15 @@ router.post("/", async (req, res) => {
         </body>
         </html>
       `,
-    }).then(() => console.log("Email sent successfully via Resend SDK"))
-      .catch(err => console.error("Resend SDK Error:", err));
+    }).then(data => {
+      console.log("Resend SDK Response:", data);
+      if (data.error) {
+        console.error("Resend Delivery Error:", data.error);
+      } else {
+        console.log("Email sent successfully, ID:", data.data?.id);
+      }
+    })
+    .catch(err => console.error("Resend SDK Critical Error:", err));
 
   } catch (error) {
     console.error("Enquiry Database Error:", error);
