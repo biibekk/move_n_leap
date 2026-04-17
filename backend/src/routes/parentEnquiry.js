@@ -16,6 +16,14 @@ router.post("/", async (req, res) => {
     });
   }
 
+  // Name validation: only alphabets and spaces
+  if (!/^[a-zA-Z\s]+$/.test(parentName)) {
+    return res.status(400).json({
+      success: false,
+      message: "Parent name should only contain alphabets and spaces.",
+    });
+  }
+
   // Initialize Resend inside the handler to ensure env vars are ready
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
@@ -40,7 +48,7 @@ router.post("/", async (req, res) => {
 
     resend.emails.send({
       from: "Move N Leap Academy <onboarding@resend.dev>",
-      to: ["movenleapacademy@gmail.com"],
+      to: ["divas.shrestha20@gmail.com"],
       subject: `New Enquiry: ${parentName} (${activitiesList})`,
       html: `
         <!DOCTYPE html>

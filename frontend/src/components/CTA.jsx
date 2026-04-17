@@ -35,6 +35,13 @@ export default function CTA() {
       if (errors.phone) {
         setErrors({ ...errors, phone: "" });
       }
+    } else if (name === "parentName") {
+      // Allow ONLY alphabets and spaces
+      const cleanedValue = value.replace(/[^a-zA-Z\s]/g, "");
+      setFormData({
+        ...formData,
+        [name]: cleanedValue,
+      });
     } else {
       setFormData({
         ...formData,
