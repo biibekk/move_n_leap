@@ -29,6 +29,10 @@ app.use(express.json());
 //   res.send("Backend is working");
 // });
 
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
+
 app.use("/routes/parentEnquiry", parentEnquiryRoute);
 
 
